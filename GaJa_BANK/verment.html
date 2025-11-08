@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verment</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+     <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="flex gap-8">
+        <footer class="bg-[#003269] h-[100vh] w-[320px] flex flex-col gap-[3px] overflow-hidden">
+        <div class="flex justify-center">
+         <img src="logo.png" alt="" class="w-40 h-24">
+        </div>
+        <div >
+            <div class="flex justify-between ml-4 ">
+                <a href="#" class="flex items-center"><i class="fa-solid fa-house text-white" class="text-xl"></i><p class="ml-4 text-white">Accueil</p></a>
+            </div>
+        </div>
+
+        <div>
+            <div class="flex flex-col justify-around ml-4 relative">
+                <div class="mb-2">
+                  <a href="#" class="flex items-center"><i class="fa-solid fa-user text-xl text-white"></i><p class="ml-4 text-white">Mes comptes</p></a>
+                <i class="fa-solid fa-angle-up text-white absolute left-52 top-2"></i>
+                </div>
+                <div class="ml-12 mb-2">
+                    <a href="#"><p class="text-white text-sm">Mes comptes Chéques</p></a>
+                </div>
+             <div class="ml-12 mb-2">
+                    <a href="#"><p class="text-white text-sm">Mes comptes  d’épargne</p></a>
+                </div>
+            </div>
+        </div>
+
+
+
+<div>
+            <div class="flex flex-col justify-around ml-4 relative">
+                <div class="mb-2">
+                  <a href="#" class="flex items-center"> <i class="fa-solid fa-building-columns text-white"></i><p class="ml-4 text-white">Mes Relations Banque</p></a>
+                <i class="fa-solid fa-angle-up text-white absolute left-52 top-2"></i>
+                </div>
+                <div class="ml-12 mb-2">
+                    <a href="#"><p class="text-white text-sm">Mes Cartes</p></a>
+                </div>
+             <div class="ml-12 mb-2">
+                    <a href="#"><p class="text-white text-sm">Mes Bénéficiaires</p></a>
+                </div>
+            </div>
+        </div>
+
+
+
+<div>
+            <div class="flex flex-col justify-around ml-4 relative">
+                <div class="mb-2">
+                  <a href="#" class="flex items-center"><i class="fa-solid fa-arrows-rotate text-[#F26D29]"></i><p class="ml-4 text-[#F26D29]">Mes opértaions</p></a>
+                <i class="fa-solid fa-angle-up text-[#F26D29] absolute left-52 top-2"></i>
+                </div>
+                <div class="ml-12 mb-2">
+                    <a href="#"><p class="text-[#F26D29] text-sm">Virement</p></a>
+                </div>
+             <div class="ml-12 mb-2">
+                    <a href="#"><p class="text-white text-sm">Recharge</p></a>
+                </div>
+
+                 <div class="ml-12 mb-2">
+                    <a href="#"><p class="text-white text-sm">Payement de facteurs</p></a>
+                </div>
+            </div>
+        </div>
+
+
+  <div>
+            <div class="flex flex-col justify-around ml-4 relative">
+                <div class="mb-2">
+                  <a href="#" class="flex items-center">      <i class="fa-solid fa-file-lines text-white"></i><p class="ml-4 text-white">Mes Demandes En ligne</p></a>
+                <i class="fa-solid fa-angle-up text-white absolute left-52 top-2"></i>
+                </div>
+                <div class="ml-12 mb-2">
+                    <a href="#"><p class="text-white text-sm">Demande de RIB</p></a>
+                </div>
+             
+            </div>
+        </div>
+
+
+
+ <div>
+            <div class="flex flex-col justify-around ml-4">
+                <div class="mb-2">
+                  <a href="#" class="flex items-center">      <i class="fa-solid fa-right-left text-white"></i><p class="ml-4 text-white">Convertisseur</p></a>
+               
+                </div>
+               
+             
+            </div>
+        </div>
+
+
+        <div>
+            <div class="flex flex-col justify-around ml-4 ">
+                <div class="mb-2">
+                  <a href="#" class="flex items-center"> <i class="fa-solid fa-rotate-left text-white"></i><p class="ml-4 text-white">Historique</p></a>
+                
+                </div>
+               
+             
+            </div>
+        </div>
+       
+    </footer>
+
+
+    <main class="w-[100%] flex flex-col gap-7 mt-4">
+
+        <div class="flex items-end ">
+            <h1 class="font-bold text-[#F26D29] ">Virement</h1>
+            <div class="h-[0.5px] bg-[#F26D29] w-[60%] ml-4"></div>
+        </div>
+        <h1 class="font-semibold">Compte a débiter</h1>
+        <h3 class="text-[#888686] font-semibold">M. MOHAMMED JAJAA</h3>
+        <div class="flex gap-52">
+            <h2 class="text-[#3386E1]">123456789098765432123456</h2>
+            <p class="text-[#37EC37]">10 000.00 MAD</p>
+        </div>
+         <div class="h-[0.5px] bg-[#F26D29] w-[80%] ml-4 mb-4"></div>
+
+
+         <div class="grid grid-cols-3 gap-8 ml-16">
+            <div class="relative  col-span-full w-[400px]">
+ <label  class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300"> Bénéficiaires:</label>
+    <input list="Bénéficiaires"  name=" Bénéficiaire" placeholder=" Bénéficiaires" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
+<datalist id="Bénéficiaires" >
+<option  value="Bénéficiaires">
+</datalist>
+
+  </div>
+
+
+   <div class="relative  l">
+  
+    <input 
+      type="text" 
+      id="montant" 
+      placeholder=" " 
+      class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none"
+    />
+
+
+    <label 
+      for="montant" 
+      class="absolute left-2 top-2 text-gray-500 text-base bg-white px-1 transition-all duration-300 
+             peer-placeholder-shown:top-2 
+             peer-placeholder-shown:text-gray-400 
+             peer-placeholder-shown:text-base 
+             peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+  Montant*
+    </label>
+  </div>
+
+   <div class="relative  ">
+  
+    <input 
+      type="text" 
+      id="motif" 
+      placeholder=" " 
+      class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none"
+    />
+
+
+    <label 
+      for="motif" 
+      class="absolute left-2 top-2 text-gray-500 text-base bg-white px-1 transition-all duration-300 
+             peer-placeholder-shown:top-2 
+             peer-placeholder-shown:text-gray-400 
+             peer-placeholder-shown:text-base 
+             peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+   Motif*
+    </label>
+  </div>
+         </div>
+
+
+
+         <div class="flex justify-center gap-8 mt-4">
+            <button class="w-52 bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl">Confirmer</button>
+            <button class="w-52  bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl">Annuler</button>
+         </div>
+         
+    </main>
+
+</body>
+</html>
