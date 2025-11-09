@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verment</title>
-
+    <title>Convertisseure</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
      <script src="https://cdn.tailwindcss.com"></script>
-    
 </head>
-<body class="flex gap-8">
-        <footer class="bg-[#003269] h-[100vh] w-[320px] flex flex-col gap-[3px] overflow-hidden">
+<body  class="flex gap-4">
+            <footer class="bg-[#003269] h-[100vh] w-[320px] flex flex-col gap-[3px] overflow-hidden">
         <div class="flex justify-center">
          <img src="logo.png" alt="" class="w-40 h-24">
         </div>
@@ -58,11 +56,11 @@
 <div>
             <div class="flex flex-col justify-around ml-4 relative">
                 <div class="mb-2">
-                  <a href="#" class="flex items-center"><i class="fa-solid fa-arrows-rotate text-[#F26D29]"></i><p class="ml-4 text-[#F26D29]">Mes opértaions</p></a>
-                <i class="fa-solid fa-angle-up text-[#F26D29] absolute left-52 top-2"></i>
+                  <a href="#" class="flex items-center"><i class="fa-solid fa-arrows-rotate text-white"></i><p class="ml-4 text-white">Mes opértaions</p></a>
+                <i class="fa-solid fa-angle-up text-white absolute left-52 top-2"></i>
                 </div>
                 <div class="ml-12 mb-2">
-                    <a href="#"><p class="text-[#F26D29] text-sm">Virement</p></a>
+                    <a href="#"><p class="text-white text-sm">Virement</p></a>
                 </div>
              <div class="ml-12 mb-2">
                     <a href="#"><p class="text-white text-sm">Recharge</p></a>
@@ -78,7 +76,7 @@
   <div>
             <div class="flex flex-col justify-around ml-4 relative">
                 <div class="mb-2">
-                  <a href="#" class="flex items-center">      <i class="fa-solid fa-file-lines text-white"></i><p class="ml-4 text-white">Mes Demandes En ligne</p></a>
+                  <a href="#" class="flex items-center"><i class="fa-solid fa-file-lines text-white"></i><p class="ml-4 text-white">Mes Demandes En ligne</p></a>
                 <i class="fa-solid fa-angle-up text-white absolute left-52 top-2"></i>
                 </div>
                 <div class="ml-12 mb-2">
@@ -93,7 +91,7 @@
  <div>
             <div class="flex flex-col justify-around ml-4">
                 <div class="mb-2">
-                  <a href="#" class="flex items-center">      <i class="fa-solid fa-right-left text-white"></i><p class="ml-4 text-white">Convertisseur</p></a>
+                  <a href="#" class="flex items-center"><i class="fa-solid fa-right-left text-[#F26D29]"></i><p class="ml-4 text-[#F26D29]">Convertisseur</p></a>
                
                 </div>
                
@@ -116,33 +114,15 @@
     </footer>
 
 
-    <main class="w-[100%] flex flex-col gap-7 mt-4">
+     <main class="w-[100%] flex flex-col gap-16 mt-4">
 
         <div class="flex items-end ">
-            <h1 class="font-bold text-[#F26D29] ">Virement</h1>
+            <h1 class="font-bold text-[#F26D29] ">Convertisseure de devises</h1>
             <div class="h-[0.5px] bg-[#F26D29] w-[60%] ml-4"></div>
         </div>
-        <h1 class="font-semibold">Compte a débiter</h1>
-        <h3 class="text-[#888686] font-semibold">M. MOHAMMED JAJAA</h3>
-        <div class="flex gap-52">
-            <h2 class="text-[#3386E1]">123456789098765432123456</h2>
-            <p class="text-[#37EC37]">10 000.00 MAD</p>
-        </div>
-         <div class="h-[0.5px] bg-[#F26D29] w-[80%] ml-4 mb-4"></div>
 
-
-         <div class="grid grid-cols-3 gap-8 ml-16">
+        <div class="grid grid-cols-3 gap-12 ml-16">
             <div class="relative  col-span-full w-[400px]">
- <label  class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300"> Bénéficiaires:</label>
-    <input list="Bénéficiaires"  name=" Bénéficiaire" placeholder=" Bénéficiaires" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
-<datalist id="Bénéficiaires" >
-<option  value="Bénéficiaires">
-</datalist>
-
-  </div>
-
-
-   <div class="relative  l">
   
     <input 
       type="text" 
@@ -159,44 +139,52 @@
              peer-placeholder-shown:text-gray-400 
              peer-placeholder-shown:text-base 
              peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
-  Montant*
+ Montant*
     </label>
   </div>
 
-   <div class="relative  ">
-  
-    <input 
-      type="text" 
-      id="motif" 
-      placeholder=" " 
-      class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none"
-    />
 
+    <div class="relative ">
+ <label  class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300"> De:</label>
+    <input list="de"  name="curreccy" placeholder="select devise"  class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
+<datalist id="de" >
+  <option value="EUR">EUR - Euro</option>
+ <option value="USD">USD - Dollar US</option>
+ <option value="RUB">RUB - Rouble Russe</option>
+ <option value="GBP">GBP - Livre</option>
+ <option value="MAD">MAD - Dirham</option>
+</datalist>
 
-    <label 
-      for="motif" 
-      class="absolute left-2 top-2 text-gray-500 text-base bg-white px-1 transition-all duration-300 
-             peer-placeholder-shown:top-2 
-             peer-placeholder-shown:text-gray-400 
-             peer-placeholder-shown:text-base 
-             peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
-   Motif*
-    </label>
   </div>
 
-  
-         </div>
+  <div class="w-[100px]">
+    <button class="bg-[#F26D29] w-[50px] h-[50px] rounded-full"><i class="fa-solid fa-arrow-right-arrow-left text-2xl text-white"></i></button>
+  </div>
 
 
+  <div class="relative -ml-52 w-[320px]">
+ <label  class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300"> Vers:</label>
+    <input list="to"  name="curreccy" placeholder="select devise"  class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
+<datalist id="to" >
+  <option value="EUR">EUR - Euro</option>
+ <option value="USD">USD - Dollar US</option>
+ <option value="RUB">RUB - Rouble Russe</option>
+ <option value="GBP">GBP - Livre</option>
+ <option value="MAD">MAD - Dirham</option>
+</datalist>
 
-         <div class="flex justify-center gap-8 mt-4">
-            <button class="w-52 bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl">Confirmer</button>
-            <button class="w-52  bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl">Annuler</button>
-         </div>
-         <div class="flex justify-center">
-            <button class="text-[#F26D29]  border-2 border-[#F26D29]  p-3  font-semibold text-sm arround rounded-xl w-64">Ajouter un bénéficiaire</button>
-         </div>
-    </main>
+  </div>
+        </div>
+        <div class="flex justify-center w-[85%]">
+             <button class="w-52 bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl">Convert</button>
+        </div>
 
+        <div class="ml-16">
+      <label class="block text-sm text-gray-600 mb-2">Résultat :</label>
+      <div id="result" class="w-[400px] p-4 bg-gray-100 rounded-sm border border-gray-200 text-lg font-medium">
+        —  
+      </div>
+    </div>
+     </main>
 </body>
 </html>
