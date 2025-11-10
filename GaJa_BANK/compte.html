@@ -10,26 +10,26 @@
 </head>
 
 <body class="flex">
-    <footer class="bg-[#003269] h-[100vh] w-64 flex flex-col gap-2">
+    <footer class="bg-[#003269] h-[100vh] w-64 flex flex-col">
         <div class="flex justify-center">
-            <img src="./images/logoBANK.png" alt="" class="w-52">
+            <img src="./images/logoBANK.png" alt="" class="w-40">
         </div>
-        <div class="ml-3 mr-2 flex flex-col gap-3">
+        <div class="ml-4 mr-2 flex flex-col gap-[1px]">
             <div>
-                <a href="#" class="flex items-center gap-3">
+                <a href="#" class="flex items-center gap-[6px]">
                     <i class="fa-solid fa-house text-white "></i>
                     <p class="text-white">Accueil</p>
                 </a>
             </div>
             <div class="flex flex-col ">
                 <div class="text-[#F26D29] flex justify-between items-center ">
-                    <a href="#" class="flex items-center gap-3">
-                        <i class="fa-solid fa-user text-xl "></i>
+                    <a href="#" class="flex items-center gap-2">
+                        <i class="fa-solid fa-user"></i>
                         <p>Mes comptes</p>
                     </a>
                     <i class="fa-solid fa-angle-up"></i>
                 </div>
-                <div class="ml-10">
+                <div class="ml-8">
                     <a href="#">
                         <p class="text-[#F26D29] ">Mes comptes chéques</p>
                     </a>
@@ -40,13 +40,13 @@
             </div>
             <div class="flex flex-col ">
                 <div class="flex items-center justify-between text-white">
-                    <a href="#" class="flex items-center gap-3">
+                    <a href="#" class="flex items-center gap-2">
                         <i class="fa-solid fa-building-columns "></i>
                         <p>Mes relations banque</p>
                     </a>
                     <i class="fa-solid fa-angle-up"></i>
                 </div>
-                <div class="ml-10 text-white">
+                <div class="ml-8 text-white">
                     <a href="#">
                         <p>Mes Cartes</p>
                     </a>
@@ -57,13 +57,13 @@
             </div>
             <div class="flex flex-col ">
                 <div class="flex justify-between items-center text-white">
-                    <a href="#" class="flex items-center gap-3">
-                        <i class="fa-solid fa-arrows-rotate text-lg"></i>
+                    <a href="#" class="flex items-center gap-2">
+                        <i class="fa-solid fa-arrows-rotate"></i>
                         <p>Mes opértaions</p>
                     </a>
                     <i class="fa-solid fa-angle-up"></i>
                 </div>
-                <div class="ml-10 text-white">
+                <div class="ml-8 text-white">
                     <a href="#">
                         <p>Virement</p>
                     </a>
@@ -75,28 +75,28 @@
                     </a>
                 </div>
             </div>
-            <div class="flex flex-col ml-1">
+            <div class="flex flex-col">
                 <div class="flex justify-between items-center text-white">
-                    <a href="#" class="flex items-center gap-3">
+                    <a href="#" class="flex items-center gap-2">
                         <i class="fa-solid fa-file-lines"></i>
                         <p>Mes Demandes En ligne</p>
                     </a>
                     <i class="fa-solid fa-angle-up"></i>
                 </div>
-                <div class="ml-10 text-white">
+                <div class="ml-8 text-white">
                     <a href="#">
                         <p>Demande de RIB</p>
                     </a>
                 </div>
             </div>
-            <div class="ml-1">
-                <a href="#" class="flex items-center text-white gap-3">
+            <div class="">
+                <a href="#" class="flex items-center text-white gap-2">
                     <i class="fa-solid fa-right-left "></i>
                     <p>Convertisseur</p>
                 </a>
             </div>
-            <div class="ml-1">
-                <a href="#" class="flex items-center text-white gap-3">
+            <div class="">
+                <a href="#" class="flex items-center text-white gap-2">
                     <i class="fa-solid fa-rotate-left"></i>
                     <p>Historique</p>
                 </a>
@@ -105,41 +105,50 @@
         </div>
 
     </footer>
-    <section class="ml-16 mt-12 w-[75%] mr-16">
+    <section class="ml-12 mt-6 w-[75%] mr-16">
 
         <div>
             <div class="flex justify-between items-center">
-                <p class="text-[#F26D29] text-5xl mb-14">Mes comptes chéques</p>
-                <div class="h-[1.5px] bg-[#F26D29] w-[58%] "></div>
+                <p class="text-[#F26D29] text-3xl mb-8">Mes comptes chéques</p>
+                <div class="h-[1px] bg-[#F26D29] w-[65%] "></div>
             </div>
 
-            <div class="text-xl ml-10 mb-14">
-                <p>N°Compte : <span id="span-num-compte" class="text-blue-600">1234567876543212</span></p>
+            <div class="ml-10 mb-10 text-gray-800 ">
+                <p class="">N°Compte : <span id="span-num-compte" class="text-blue-600">1234567876543212</span></p>
                 <p>Solde actualisé : <span class="text-green-400"><span id="span-solde">10000.00</span><span
                             id="span-MAD">MAD</span></span> </p>
             </div>
         </div>
         <div>
             <div class="flex justify-between items-center">
-                <p class="text-[#F26D29] text-5xl mb-10">Opérations</p>
-                <div class="h-[1.5px] bg-[#F26D29] w-[79%] "></div>
+                <p class="text-[#F26D29] text-3xl mb-8">Opérations</p>
+                <div class="h-[1px] bg-[#F26D29] w-[81%] "></div>
             </div>
-            <div class="flex flex-col gap-6 text-xl ml-10 mb-10 w-[50%]">
+            <div class="grid grid-cols-2 gap-4 ml-10 mb-10 ">
                 <div>
                     <p id="date-operation" class="text-blue-600">01/11/2025</p>
-                    <div class="bg-gray-300 flex justify-between rounded-xl p-4">
+                    <div class="bg-gray-200 flex justify-between rounded-lg p-2 text-gray-800">
                         <p>RETRAIT CARTE 9168 10H12 GAB </p>
-                        <p class="text-red-500"><span id="type-operation">-</span><span
-                                id="montant-operation">500</span>
+                        <p class="text-red-500"><span id="type-operation">-</span>
+                            <span id="montant-operation">500.00</span> MAD
                         </p>
                     </div>
                 </div>
                 <div>
                     <p id="date-operation" class="text-blue-600">30/10/2025</p>
-                    <div class="bg-gray-300 flex justify-between rounded-xl p-4">
+                    <div class="bg-gray-200 flex justify-between rounded-lg p-2 text-gray-800">
                         <p>VIRT RECU DE LA PART ASSO LEF </p>
                         <p class="text-green-400"><span id="type-operation">+</span><span
-                                id="montant-operation">3000</span>
+                                id="montant-operation">3000.00</span> MAD
+                        </p>
+                    </div>
+                </div>
+                 <div>
+                    <p id="date-operation" class="text-blue-600">30/09/2025</p>
+                    <div class="bg-gray-200 flex justify-between rounded-lg p-2 text-gray-800">
+                        <p>VIRT RECU DE LA PART ASSO LEF </p>
+                        <p class="text-green-400"><span id="type-operation">+</span><span
+                                id="montant-operation">3000.00</span> MAD
                         </p>
                     </div>
                 </div>
