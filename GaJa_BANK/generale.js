@@ -9,3 +9,5 @@
         sidebar.classList.remove("w-[320px]");
         sidebar.classList.add("w-0");
     }
+
+    
