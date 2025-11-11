@@ -1,0 +1,12 @@
+@keyframes slow-bounce {
+  0%, 100% {
+    transform: translateY(-40px) rotate(-15deg);
+  }
+  50% {
+    transform: translateY(0) rotate(-15deg);
+  }
+}
+
+.slow-bounce {
+  animation: slow-bounce 3s ease-in-out infinite;
+}

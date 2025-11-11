@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>GaJa BANK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
- 
 
-
+<body class="font-[Poppins] overflow-hidden">
+    <header>
+        <div class="flex justify-between border-b-2 border-[#F26D29] ">
+            <img src="./images/logoBANK.png" alt="logo GAJA BANK" class="w-52 ml-6">
+            <div class="flex items-center gap-4 mr-12">
+                <button
+                    class="flex justify-center items-center bg-[#00AFF0] rounded-full w-48 h-14 text-white text-2xl  ">S'inscrire</button>
+                <button
+                    class="flex justify-center items-center border-2 border-[#00AFF0] rounded-full w-48 h-14 text-[#F26D29] text-2xl">Se
+                    connecte</button>
+            </div>
+        </div>
+    </header>
+    <section class="bg-[url('./images/bg-hero.png')] h-[83.5vh] w-full flex items-center">
+        <div class="flex flex-col gap-12 ml-24">
+            <p class="text-[#F26D29] font-semibold text-3xl">Ouvrez votre compte bancaire en ligne en toute simplicité
+            </p>
+            <p class="text-xl font-normal text-[#212729]">Télécharger l'application <span
+                    class="text-[#ff0000] font-semibold">GaJa Mobile</span> et ouvrer un compte bancaire 100% en
+                <br>ligne juste en quelque étapes simples et sans
+                vous déplacer en agence.</p>
+            <div class="flex gap-8 ml-24">
+                <div class="flex gap-4 border border-black rounded-md p-4 w-64">
+                    <div class="text-6xl">
+                        <i class="fa-brands fa-apple "></i>
+                    </div>
+                    <div class="font-semibold ">
+                        <p class="text-normal">Disponible sur</p>
+                        <p class="text-3xl">App Store</p>
+                    </div>
+                </div>
+                <div class="border border-black rounded-md flex gap-4 p-4 ">
+                    <div class="flex ">
+                        <img src="./images/googleplay.png" alt="Google Play">
+                        <!-- <i class="fa-brands fa-google-play"></i> -->
+                    </div>
+                    <div class="text-[#3d3d3a] font-normal">
+                        <p class="text-xl ">DISPONIBLE SUR</p>
+                        <p class="text-3xl ">Google Play</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="./images/mobile.png" alt="mobile hero" class="slow-bounce">
+        </div>
+    </section>
 </body>
+
 </html>

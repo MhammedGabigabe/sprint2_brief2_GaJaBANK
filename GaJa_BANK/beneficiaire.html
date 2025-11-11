@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bénéficiaires- GaJa BANK</title>
+</head>
+
+<body class="flex">
+
+    <footer class="bg-[#003269] h-[100vh] w-64 flex flex-col gap-2">
+        <div class="flex justify-center">
+            <img src="./images/logoBANK.png" alt="" class="w-52">
+        </div>
+        <div class="ml-3 mr-2 flex flex-col gap-3">
+            <div>
+                <a href="#" class="flex items-center gap-3">
+                    <i class="fa-solid fa-house text-white "></i>
+                    <p class="text-white">Accueil</p>
+                </a>
+            </div>
+            <div class="flex flex-col ">
+                <div class="text-white flex justify-between items-center ">
+                    <a href="#" class="flex items-center gap-3">
+                        <i class="fa-solid fa-user text-xl "></i>
+                        <p>Mes comptes</p>
+                    </a>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="ml-10">
+                    <a href="#">
+                        <p class="text-white ">Mes comptes chéques</p>
+                    </a>
+                    <a href="#">
+                        <p class="text-white ">Mes comptes d’épargne</p>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col ">
+                <div class="flex items-center justify-between text-[#F26D29]">
+                    <a href="#" class="flex items-center gap-3">
+                        <i class="fa-solid fa-building-columns "></i>
+                        <p>Mes relations banque</p>
+                    </a>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="ml-10 ">
+                    <a href="#">
+                        <p class="text-white">Mes Cartes</p>
+                    </a>
+                    <a href="#" class="text-[#F26D29]">
+                        <p>Mes Bénéficiaires</p>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col ">
+                <div class="flex justify-between items-center text-white">
+                    <a href="#" class="flex items-center gap-3">
+                        <i class="fa-solid fa-arrows-rotate text-lg"></i>
+                        <p>Mes opértaions</p>
+                    </a>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="ml-10 text-white">
+                    <a href="#">
+                        <p>Virement</p>
+                    </a>
+                    <a href="#">
+                        <p>Recharge</p>
+                    </a>
+                    <a href="#">
+                        <p>Payement de facteurs</p>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col ml-1">
+                <div class="flex justify-between items-center text-white">
+                    <a href="#" class="flex items-center gap-3">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <p>Mes Demandes En ligne</p>
+                    </a>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="ml-10 text-white">
+                    <a href="#">
+                        <p>Demande de RIB</p>
+                    </a>
+                </div>
+            </div>
+            <div class="ml-1">
+                <a href="#" class="flex items-center text-white gap-3">
+                    <i class="fa-solid fa-right-left "></i>
+                    <p>Convertisseur</p>
+                </a>
+            </div>
+            <div class="ml-1">
+                <a href="#" class="flex items-center text-white gap-3">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <p>Historique</p>
+                </a>
+            </div>
+        </div>
+        </div>
+
+    </footer>
+
+    <section class="w-[80%]">
+        <div class="flex items-center justify-between gap-4 mt-8 ml-12">
+            <p class="text-[#F26D29] text-5xl">Mes bénéficiaires</p>
+            <div class="h-[1.5px] bg-[#F26D29] w-[60%] mt-6"></div>
+            <button
+                class="bg-[#F26D29] text-white text-4xl rounded-full w-12 h-12 flex content-center justify-center">+</button>
+        </div>
+        <div class="flex justify-center mt-20">
+            <div class="grid grid-cols-2 gap-2 w-[50%]">
+                <div class="flex justify-start">
+                <input type="text" id="recherche_beneficiaire"
+                    class=" w-64 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-xl mb-24"
+                    placeholder="Recherche*" />
+                </div>
+                <div class="flex justify-end">
+                <select id="liste-trie-beneficiaire"
+                    class=" w-64 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-xl mb-24"
+                    placeholder="">
+                    <option>Trié par nom</option>
+                    <option>Trié par date</option>
+                </select>
+            </div>
+                <div class="col-span-2 bg-gray-100 flex justify-between items-center p-2 rounded-xl">
+                    <div class="ml-4">
+                        <p class="text-[#F26D29] text-xl" id="nom-beneficiaire">Ayoub Alaoui</p>
+                        <p class="text-blue-600">1234567876543212</p>
+                    </div>
+                    <div class=" mr-4 flex items-center gap-3">
+                        <a href="#">Active</a>
+                        <!-- <input type="checkbox"> -->
+                        <label class="cursor-pointer ">
+                            <input type="checkbox" value="" checked class="sr-only peer">
+                            <div class="w-8 h-4 bg-gray-300 rounded-full peer-checked:bg-green-400 after:absolute after:bg-white 
+                                    after:rounded-full after:h-4 after:w-4 peer-checked:after:translate-x-full"></div>
+                        </label>
+                        <a href="#"><i class="fa-solid fa-trash text-[#F26D29]"></i></a>
+                    </div>
+                </div>
+                <div class="col-span-2 bg-gray-100 flex justify-between items-center p-2 rounded-xl">
+                    <div class="ml-4">
+                        <p class="text-[#F26D29] text-xl" id="nom-beneficiaire">Amine Mazani</p>
+                        <p class="text-blue-600">1234567876544212</p>
+                    </div>
+                    <div class=" mr-4 flex items-center gap-3">
+                        <a href="#">Active</a>
+                        <!-- <input type="checkbox"> -->
+                        <label class="cursor-pointer ">
+                            <input type="checkbox" value="" checked class="sr-only peer">
+                            <div class="w-8 h-4 bg-gray-300 rounded-full peer-checked:bg-green-400 after:absolute after:bg-white 
+                                    after:rounded-full after:h-4 after:w-4 peer-checked:after:translate-x-full"></div>
+                        </label>
+                        <a href="#"><i class="fa-solid fa-trash text-[#F26D29]"></i></a>
+                    </div>
+                </div>
+                <div class="col-span-2 bg-gray-100 flex justify-between items-center p-2 rounded-xl">
+                    <div class="ml-4">
+                        <p class="text-[#F26D29] text-xl" id="nom-beneficiaire">Ahmed badr</p>
+                        <p class="text-blue-600">1234567876545212</p>
+                    </div>
+                    <div class=" mr-4 flex items-center gap-3">
+                        <a href="#">Active</a>
+                        <!-- <input type="checkbox"> -->
+                        <label class="cursor-pointer ">
+                            <input type="checkbox" value="" checked class="sr-only peer">
+                            <div class="w-8 h-4 bg-gray-300 rounded-full peer-checked:bg-green-400 after:absolute after:bg-white 
+                                    after:rounded-full after:h-4 after:w-4 peer-checked:after:translate-x-full"></div>
+                        </label>
+                        <a href="#"><i class="fa-solid fa-trash text-[#F26D29]"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
