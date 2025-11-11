@@ -5,16 +5,12 @@ function openNav() {
     sidebar.classList.add("w-[320px]");
 }
 
-// ✅ FERMER SIDEBAR
+// FERMER SIDEBAR
 function closeNav() {
     const sidebar = document.getElementById("footer");
     sidebar.classList.remove("w-[320px]");
     sidebar.classList.add("w-0");
 }
-
-
-
-
 
 const btn_enregistrer = document.getElementById("enregistrer");
 

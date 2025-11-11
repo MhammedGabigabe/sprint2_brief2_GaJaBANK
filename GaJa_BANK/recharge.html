@@ -11,26 +11,26 @@
 
 <body class="flex">
 
-    <footer class="bg-[#003269] h-[100vh] w-64 flex flex-col gap-2">
+    <footer class="bg-[#003269] h-[100vh] w-64 flex flex-col">
         <div class="flex justify-center">
-            <img src="./images/logoBANK.png" alt="" class="w-52">
+            <img src="./images/logoBANK.png" alt="" class="w-40">
         </div>
-        <div class="ml-3 mr-2 flex flex-col gap-3">
+        <div class="ml-4 mr-2 flex flex-col gap-[1px]">
             <div>
-                <a href="#" class="flex items-center gap-3">
+                <a href="#" class="flex items-center gap-[6px]">
                     <i class="fa-solid fa-house text-white "></i>
                     <p class="text-white">Accueil</p>
                 </a>
             </div>
             <div class="flex flex-col ">
                 <div class="text-white flex justify-between items-center ">
-                    <a href="#" class="flex items-center gap-3">
-                        <i class="fa-solid fa-user text-xl "></i>
+                    <a href="#" class="flex items-center gap-2">
+                        <i class="fa-solid fa-user"></i>
                         <p>Mes comptes</p>
                     </a>
                     <i class="fa-solid fa-angle-up"></i>
                 </div>
-                <div class="ml-10">
+                <div class="ml-8">
                     <a href="#">
                         <p class="text-white ">Mes comptes chéques</p>
                     </a>
@@ -41,15 +41,15 @@
             </div>
             <div class="flex flex-col ">
                 <div class="flex items-center justify-between text-white">
-                    <a href="#" class="flex items-center gap-3">
+                    <a href="#" class="flex items-center gap-2">
                         <i class="fa-solid fa-building-columns "></i>
                         <p>Mes relations banque</p>
                     </a>
                     <i class="fa-solid fa-angle-up"></i>
                 </div>
-                <div class="ml-10 ">
+                <div class="ml-8 text-white">
                     <a href="#">
-                        <p class="text-white">Mes Cartes</p>
+                        <p>Mes Cartes</p>
                     </a>
                     <a href="#" class="text-white">
                         <p>Mes Bénéficiaires</p>
@@ -58,46 +58,46 @@
             </div>
             <div class="flex flex-col ">
                 <div class="flex justify-between items-center text-[#F26D29]">
-                    <a href="#" class="flex items-center gap-3">
-                        <i class="fa-solid fa-arrows-rotate text-lg"></i>
+                    <a href="#" class="flex items-center gap-2">
+                        <i class="fa-solid fa-arrows-rotate"></i>
                         <p>Mes opértaions</p>
                     </a>
                     <i class="fa-solid fa-angle-up"></i>
                 </div>
-                <div class="ml-10 text-white">
+                <div class="ml-8 text-white">
                     <a href="#">
                         <p>Virement</p>
                     </a>
-                    <a href="#">
-                        <p class="text-[#F26D29]">Recharge</p>
+                    <a href="#" class="text-[#F26D29]">
+                        <p>Recharge</p>
                     </a>
                     <a href="#">
                         <p>Payement de facteurs</p>
                     </a>
                 </div>
             </div>
-            <div class="flex flex-col ml-1">
+            <div class="flex flex-col">
                 <div class="flex justify-between items-center text-white">
-                    <a href="#" class="flex items-center gap-3">
+                    <a href="#" class="flex items-center gap-2">
                         <i class="fa-solid fa-file-lines"></i>
                         <p>Mes Demandes En ligne</p>
                     </a>
                     <i class="fa-solid fa-angle-up"></i>
                 </div>
-                <div class="ml-10 text-white">
+                <div class="ml-8 text-white">
                     <a href="#">
                         <p>Demande de RIB</p>
                     </a>
                 </div>
             </div>
-            <div class="ml-1">
-                <a href="#" class="flex items-center text-white gap-3">
+            <div class="">
+                <a href="#" class="flex items-center text-white gap-2">
                     <i class="fa-solid fa-right-left "></i>
                     <p>Convertisseur</p>
                 </a>
             </div>
-            <div class="ml-1">
-                <a href="#" class="flex items-center text-white gap-3">
+            <div class="">
+                <a href="#" class="flex items-center text-white gap-2">
                     <i class="fa-solid fa-rotate-left"></i>
                     <p>Historique</p>
                 </a>
@@ -107,57 +107,90 @@
 
     </footer>
 
-    <section class="w-[80%] ml-12 mt-6">
-        <div class="flex gap-4 items-center">
-            <p class="text-5xl text-[#F26D29]">Recharge</p>
+    <section class="w-[80%] mt-6">
+        <div class="flex gap-4 items-center justify-around">
+            <p class="text-3xl text-[#F26D29]">Recharge</p>
             <div class="bg-[#F26D29] h-[1.5px] w-[80%] mt-6"></div>
         </div>
 
         <div class="flex justify-center">
-            <div class="grid grid-cols-2 mt-8 w-[50%] gap-12">
-                <select id="liste-operateurt"
-                    class=" w-64 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-lg"
-                    placeholder="">
-                    <option>Opérateur</option>
-                    <option>IAM</option>
-                    <option>Orange</option>
-                    <option>Inwi</option>
-                </select>
-                <select id="type-recharge"
-                    class=" w-64 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-lg "
-                    placeholder="">
-                    <option>Type opération</option>
-                    <option>*3</option>
-                    <option>*2</option>
-                    <option>*6</option>
-                </select>
-                <input type="text" id="numero-tele"
-                    class=" w-64 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-lg "
-                    placeholder="Numero de téléphone*" />
-                <select id="montant-recharge"
-                    class=" w-64 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-lg "
-                    placeholder="">
-                    <option>Montant de recharge</option>
-                    <option>20 DH</option>
-                    <option>50 DH</option>
-                    <option>100 DH</option>
-                </select>
-                <div class="flex gap-2 col-span-2">
+            <div class="grid grid-cols-2 mt-6 w-[50%] gap-10">
+               <div class="">
+                    <div class="relative w-52">
+                        <select id="tri" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 
+                            outline-none text-gray-900 text-base p-2 bg-transparent rounded-none appearance-none">
+                            <option value="" disabled selected hidden></option>
+                            <option value="nom">Inwi</option>
+                            <option value="date">IAM</option>
+                            <option value="date">Orange</option>
+                        </select>
+                        <label for="tri" class="absolute left-0 text-gray-500 text-base bg-white px-1 transition-all duration-300
+                            peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base
+                            peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+                            Opérateur
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="relative w-52">
+                        <select id="tri" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 
+                            outline-none text-gray-900 text-base p-2 bg-transparent rounded-none appearance-none">
+                            <option value="" disabled selected hidden></option>
+                            <option value="nom">*2</option>
+                            <option value="date">*3</option>
+                            <option value="date">*6</option>
+                        </select>
+                        <label for="tri" class="absolute left-0 text-gray-500 text-base bg-white px-1 transition-all duration-300
+                            peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base
+                            peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+                            Type opération
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="relative w-52">
+                        <input type="text" id="recherche" placeholder=" " class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 
+                            outline-none text-gray-900 text-base p-2 bg-transparent rounded-none" />
+                        <label for="recherche" class="absolute left-0 text-gray-500 text-base bg-white px-1 transition-all duration-300 
+                            peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base 
+                            peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+                            Numéro téléphone*
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="relative w-52">
+                        <select id="tri" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 
+                            outline-none text-gray-900 text-base p-2 bg-transparent rounded-none appearance-none">
+                            <option value="" disabled selected hidden></option>
+                            <option value="nom">10 DH</option>
+                            <option value="date">20 DH</option>
+                            <option value="date">50 DH</option>
+                            <option value="date">100 DH</option>
+                        </select>
+                        <label for="tri" class="absolute left-0 text-gray-500 text-base bg-white px-1 transition-all duration-300
+                            peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base
+                            peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+                            Montant recharge
+                        </label>
+                    </div>
+                </div>
+                <div class="flex gap-2 col-span-2 ">
                     <input type="checkbox">
-                    <p>Sauvgarder ce numéro</p>
+                    <p class="text-base text-gray-500">Sauvgarder ce numéro</p>
                 </div>
                 <div class="flex justify-center">
-                    <button class="bg-[#F26D29] text-white w-[50%] p-2 text-lg rounded-2xl">Recherger</button>
+                    <button class="bg-[#F26D29] text-sm text-white p-3 w-40 arround rounded-xl">Recherger</button>
                 </div>
                 <div class="flex justify-center">
-                    <button class="bg-[#F26D29] text-white w-[50%] p-2 text-lg rounded-2xl">Annuler</button>
+                    <button class="bg-[#F26D29] text-sm text-white p-3 w-40 arround rounded-xl">Annuler</button>
                 </div>
             </div>
         </div>
 
-        <div class="flex justify-center w-full h-[30%] mt-14">
+        <div class="flex justify-center w-full h-[30%] mt-6">
             <div class="bg-gray-100 w-[40%] h-full rounded-2xl border-t-2 border-[#F26D29]">
-                <p class="text-2xl text-[#F26D29] ml-6 mt-4 mb-4">Mes favoris</p>
+                <p class="text-xl text-[#F26D29] ml-6 mt-4 mb-4">Mes favoris</p>
                 <div class="ml-12">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="bg-white p-2 flex justify-between rounded-xl w-[70%]">
