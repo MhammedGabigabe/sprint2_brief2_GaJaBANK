@@ -12,7 +12,7 @@ function closeNav() {
 }
 
 
-
+try{
 
 
     const btn_enregistrer = document.getElementById("enregistrer");
