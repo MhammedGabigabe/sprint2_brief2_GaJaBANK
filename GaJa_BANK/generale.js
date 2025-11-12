@@ -64,14 +64,19 @@ try {
 
         let resp = "";
         let resd = "";
+        let identifiant="";
         for(let i=0;i<16;i++){
-            resp += Math.floor(Math.random()*10);
+            let d= Math.floor(Math.random()*10);
+            resp +=d;
+            if(i<7){
+                identifiant+=d;
+            }
             resd += Math.floor(Math.random()*10);
         }
 
         let numeroComptePrincipal = "121343" + resp + "00";
         let numeroCompteEpargne = "121343" + resd + "00";
-        let identifiant = "121343" + resp[0];
+      
 
         let users = JSON.parse(localStorage.getItem("users")) || [];
 
@@ -88,11 +93,11 @@ try {
                 comptePrincipal: {
                     numero: numeroComptePrincipal,
                     identifiant: identifiant,
-                    solde: 0
+                    solde: 10000.00
                 },
                 compteEpargne: {
                     numero: numeroCompteEpargne,
-                    solde: 0
+                    solde: 10000.00
                 }
             }
         };
@@ -129,6 +134,7 @@ function authentification(){
             identifiant === users[i].comptes.comptePrincipal.identifiant &&
             password === users[i].motDePasse
         ){
+            localStorage.setItem("userConnected",JSON.stringify(users[i]));
             found = true;
             window.location.replace("accueil.html");
             break;
@@ -139,3 +145,8 @@ function authentification(){
         alert("Identifiant ou mot de passe incorrect !");
     }
 }
+
+
+
+
+

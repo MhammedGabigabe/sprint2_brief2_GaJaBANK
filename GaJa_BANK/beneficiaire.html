@@ -9,7 +9,7 @@
     <title>Bénéficiaires- GaJa BANK</title>
 </head>
 
-<body class="flex">
+<body class="flex ">
 
     <footer class="bg-[#003269] h-[100vh] w-64 flex flex-col">
         <div class="flex justify-center">
@@ -112,89 +112,86 @@
         <div class="flex items-center justify-around mt-8">
             <p class="text-[#F26D29] text-3xl">Mes bénéficiaires</p>
             <div class="h-[1px] bg-[#F26D29] w-[60%] mt-6"></div>
-            <button class="bg-[#F26D29] text-white text-xl rounded-full w-10 h-10 flex justify-center items-center">
+            <button class="bg-[#F26D29] text-white text-xl rounded-full w-10 h-10 flex justify-center items-center" id="openBtn">
                 +</button>
         </div>
+
+
         <div class="flex justify-center mt-10">
-            <div class="grid grid-cols-2 gap-2 w-[50%]">
-                <div class="flex justify-start">
-                    <div class="relative w-52">
-                        <input type="text" id="recherche" placeholder=" " class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 
-                            outline-none text-gray-900 text-base p-2 bg-transparent rounded-none" />
-                        <label for="recherche" class="absolute left-0 text-gray-500 text-base bg-white px-1 transition-all duration-300 
-                            peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base 
-                            peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
-                            Rechercher*
-                        </label>
-                    </div>
-                </div>
-                <div class="flex justify-end">
-                    <div class="relative w-52">
-                        <select id="tri" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 
-                            outline-none text-gray-900 text-base p-2 bg-transparent rounded-none appearance-none">
-                            <option value="" disabled selected hidden></option>
-                            <option value="nom">Nom</option>
-                            <option value="date">Date</option>
-                        </select>
-                        <label for="tri" class="absolute left-0 text-gray-500 text-base bg-white px-1 transition-all duration-300
-                            peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base
-                            peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
-                            Trier par :
-                        </label>
-                    </div>
-                </div>
-                <div class="col-span-2 mt-16 bg-gray-100 flex justify-between items-center p-2 rounded-xl">
-                    <div class="ml-4">
-                        <p class="text-[#F26D29]" id="nom-beneficiaire">Ayoub Alaoui</p>
-                        <p class="text-blue-600">1234567876543212</p>
-                    </div>
-                    <div class="mr-4 flex items-center gap-2">
-                        <a href="#">Active</a>
-                        <label class="cursor-pointer relative">
-                            <input type="checkbox" value="" checked class="sr-only peer">
-                            <div class="w-8 h-4 bg-gray-300 rounded-full peer-checked:bg-green-400 after:absolute after:bg-white 
-                                after:rounded-full after:h-4 after:w-4 peer-checked:after:translate-x-full"></div>
-                        </label>
-                        <a href="#"><i class="fa-solid fa-trash text-[#F26D29]"></i></a>
-                    </div>
-                </div>
+  <div class="grid grid-cols-2 gap-2 w-[50%]">
+    
+    <div class="flex justify-start">
+      <div class="relative w-52">
+        <input type="text" id="recherche" placeholder=" " class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 
+          outline-none text-gray-900 text-base p-2 bg-transparent rounded-none" />
+        <label for="recherche" class="absolute left-0 text-gray-500 text-base bg-white px-1 transition-all duration-300 
+          peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base 
+          peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+          Rechercher*
+        </label>
+      </div>
+    </div>
 
-                <div class="col-span-2 bg-gray-100 flex justify-between items-center p-2 rounded-xl">
-                    <div class="ml-4">
-                        <p class="text-[#F26D29]" id="nom-beneficiaire">Amine Mazani</p>
-                        <p class="text-blue-600">1234567876544212</p>
-                    </div>
-                    <div class="mr-4 flex items-center gap-2">
-                        <a href="#">Active</a>
-                        <label class="cursor-pointer relative">
-                            <input type="checkbox" value="" checked class="sr-only peer">
-                            <div class="w-8 h-4 bg-gray-300 rounded-full peer-checked:bg-green-400 after:absolute after:bg-white 
-                                 after:rounded-full after:h-4 after:w-4 peer-checked:after:translate-x-full"></div>
-                        </label>
-                        <a href="#"><i class="fa-solid fa-trash text-[#F26D29]"></i></a>
-                    </div>
-                </div>
+    <div class="flex justify-end">
+      <div class="relative w-52">
+        <select id="tri" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 
+          outline-none text-gray-900 text-base p-2 bg-transparent rounded-none appearance-none">
+          <option value="" disabled selected hidden></option>
+          <option value="nom">Nom</option>
+          <option value="date">Date</option>
+          <option value="active">Active</option>
+          <option value="Inactive">Inactive</option>
+        </select>
+        <label for="tri" class="absolute left-0 text-gray-500 text-base bg-white px-1 transition-all duration-300
+          peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base
+          peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+          Trier par :
+        </label>
+      </div>
+    </div>
 
-                <div class="col-span-2 bg-gray-100 flex justify-between items-center p-2 rounded-xl">
-                    <div class="ml-4">
-                        <p class="text-[#F26D29]" id="nom-beneficiaire">Ahmed Badr</p>
-                        <p class="text-blue-600">1234567876545212</p>
-                    </div>
-                    <div class="mr-4 flex items-center gap-2">
-                        <a href="#">Active</a>
-                        <label class="cursor-pointer relative">
-                            <input type="checkbox" value="" checked class="sr-only peer">
-                            <div class="w-8 h-4 bg-gray-300 rounded-full peer-checked:bg-green-400 after:absolute after:bg-white 
-                                after:rounded-full after:h-4 after:w-4 peer-checked:after:translate-x-full"></div>
-                        </label>
-                        <a href="#"><i class="fa-solid fa-trash text-[#F26D29]"></i></a>
-                    </div>
-                </div>
-            </div>
 
-        </div>
+    <div id="resultats" class="col-span-2 w-full"></div>
+
+  </div>
+</div>
+
 
     </section>
+
+     <div id="popup" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center z-50">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-6 relative">
+      <h2 class="text-xl font-bold mb-4 text-center text-orange-500">Ajouter Bénéficiaires</h2>
+      
+      <form id="form" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Nom</label>
+          <input type="text" name="nom" required id="nom"
+                 class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-200 outline-none">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Prénom</label>
+          <input type="text" name="prenom" required id="prenom"
+                 class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-200 outline-none">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">RIB</label>
+          <input type="text" name="rib" required id="rib"
+                 class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-200 outline-none">
+        </div>
+
+        <div class="flex justify-end gap-3 pt-3">
+          <button type="button" id="closeBtn"
+                  class="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100">Annuler</button>
+          <button type="submit" id="envoyer"
+                  class="px-4 py-2 rounded-lg bg-orange-600 text-white hover:bg-green-700">Enregistrer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<script src="benificiere.js"></script>
 </body>
 
 </html>
