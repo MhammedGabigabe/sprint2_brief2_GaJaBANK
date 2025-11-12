@@ -4,7 +4,6 @@ function openNav() {
     sidebar.classList.add("w-[320px]");
 }
 
-// ✅ FERMER SIDEBAR
 function closeNav() {
     const sidebar = document.getElementById("footer");
     sidebar.classList.remove("w-[320px]");
@@ -13,7 +12,7 @@ function closeNav() {
 
 
 
-
+try {
 
     const btn_enregistrer = document.getElementById("enregistrer");
 
