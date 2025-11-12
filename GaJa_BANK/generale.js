@@ -4,16 +4,13 @@ function openNav() {
     sidebar.classList.add("w-[320px]");
 }
 
-// ✅ FERMER SIDEBAR
 function closeNav() {
     const sidebar = document.getElementById("footer");
     sidebar.classList.remove("w-[320px]");
     sidebar.classList.add("w-0");
 }
 
-
 try{
-
 
     const btn_enregistrer = document.getElementById("enregistrer");
 
@@ -25,7 +22,7 @@ try{
 
         const name = document.getElementById("name");
         const prenom = document.getElementById("prenom");
-        const genres = document.getElementById("genre");
+        const genre = document.getElementById("genre");
         const email = document.getElementById("email");
         const nationnalite = document.getElementById("nationnalite");
         const pays = document.getElementById("pay");
@@ -50,7 +47,7 @@ try{
 
         if (!regexName.test(name.value.trim())) return showError("Nom invalide !", name);
         if (!regexName.test(prenom.value.trim())) return showError("Prénom invalide !", prenom);
-        if (genres.value === "") return showError("Choisissez votre genre", genres);
+        if (genre.value === "") return showError("Choisissez votre genre", genre);
         if (!regexEmail.test(email.value.trim())) return showError("Email invalide", email);
         if (nationnalite.value.trim().length < 3) return showError("Nationalité invalide", nationnalite);
         if (pays.value.trim().length < 3) return showError("Pays invalide", pays);
@@ -79,7 +76,7 @@ try{
         let user = {
             nom: name.value.trim(),
             prenom: prenom.value.trim(),
-            genre: genres.value.trim(),
+            genre: genre.value.trim(),
             email: email.value.trim(),
             nationalite: nationnalite.value.trim(),
             pays: pays.value.trim(),
