@@ -10,7 +10,13 @@ function closeNav() {
     sidebar.classList.add("w-0");
 }
 
-try{
+
+
+
+
+
+try {
+
 
     const btn_enregistrer = document.getElementById("enregistrer");
 

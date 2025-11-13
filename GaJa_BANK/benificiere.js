@@ -7,7 +7,22 @@ const ribb = document.getElementById("rib");
 const envoyer = document.getElementById("envoyer");
 const recherche = document.getElementById("recherche");
 const container = document.getElementById('resultats');
-const tri=document.getElementById("tri")
+const tri=document.getElementById("tri");
+
+container.addEventListener("click", (e) =>{
+   let verm=e.target.closest(".carte");
+   let index=parseInt(verm.dataset.index);
+   const b=JSON.parse(localStorage.getItem("bénificiaires"));
+     const nouvelle_bénificiere=[];
+   for(let j=0;j<b.length;j++){
+    if(j !==index){
+        nouvelle_bénificiere.push(b[j]);
+    }
+   }
+   localStorage.setItem("bénificiaires", JSON.stringify(nouvelle_bénificiere));
+
+});
+
 
 openBtn.addEventListener('click', () => popup.classList.remove('hidden'));
 closeBtn.addEventListener('click', () => popup.classList.add('hidden'));
@@ -45,7 +60,8 @@ function afficherBeneficiaires(liste) {
 
   for (let i = 0; i < liste.length; i++) {
     const newDiv = document.createElement('div');
-    newDiv.className = "col-span-2 mt-4 bg-gray-100 flex justify-between items-center p-2 rounded-xl";
+    newDiv.className = "carte col-span-2 mt-4 bg-gray-100 flex justify-between items-center p-2 rounded-xl";
+newDiv.setAttribute("data-index",i);
 
     newDiv.innerHTML = `
       <div class="ml-4">
@@ -55,7 +71,7 @@ function afficherBeneficiaires(liste) {
       <div class="mr-4 flex items-center gap-2">
           <a href="#">Active</a>
           <label class="cursor-pointer relative">
-              <input type="checkbox" value="" checked class="sr-only peer">
+              <input type="checkbox" value="" ${liste[i].status === "active" ? "checked" : ""} class="sr-only peer" id="active">
               <div class="w-8 h-4 bg-gray-300 rounded-full peer-checked:bg-green-400 after:absolute after:bg-white 
                   after:rounded-full after:h-4 after:w-4 peer-checked:after:translate-x-full"></div>
           </label>
@@ -107,4 +123,13 @@ tri.addEventListener("change", () => {
   }
 
  afficherBeneficiaires(listeFiltrée);
+});
+const checkbox=document.getElementById("active");
+
+checkbox.addEventListener("change", () => {
+   if (checkbox.checked) {
+    alert("✅ La checkbox est cochée")
+    } else {
+     alert("❌ La checkbox est décochée");
+    }
 });
