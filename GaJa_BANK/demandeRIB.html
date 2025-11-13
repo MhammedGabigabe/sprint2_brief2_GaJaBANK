@@ -12,59 +12,63 @@
 <body class="flex">
 
      <footer class="bg-[#003269] h-[100vh] w-64 flex flex-col">
+
         <div class="flex justify-center">
             <img src="./images/logoBANK.png" alt="" class="w-40">
         </div>
-        <div class="ml-4 mr-2 flex flex-col gap-[1px]">
-            <div>
-                <a href="#" class="flex items-center gap-[6px]">
-                    <i class="fa-solid fa-house text-white "></i>
-                    <p class="text-white">Accueil</p>
+
+        <div class="ml-4 mr-2 flex flex-col gap-3">
+            <div class="">
+                <a href="#" class="flex items-center gap-2 text-white">
+                    <i class="fa-solid fa-house"></i>
+                    <p class="">Accueil</p>
                 </a>
             </div>
-            <div class="flex flex-col ">
-                <div class="text-white flex justify-between items-center ">
+            <div class="flex flex-col">
+                <div class="menu-header text-white flex justify-between items-center cursor-pointer">
                     <a href="#" class="flex items-center gap-2">
                         <i class="fa-solid fa-user"></i>
                         <p>Mes comptes</p>
                     </a>
-                    <i class="fa-solid fa-angle-up"></i>
+                    <i class="fa-solid fa-angle-up transition-transform duration-300"></i>
                 </div>
-                <div class="ml-8">
+                <div class="submenu ml-8 text-white hidden">
                     <a href="#">
-                        <p class="text-white ">Mes comptes chéques</p>
+                        <p>Mes comptes chèques</p>
                     </a>
                     <a href="#">
-                        <p class="text-white ">Mes comptes d’épargne</p>
+                        <p>Mes comptes d’épargne</p>
                     </a>
                 </div>
             </div>
-            <div class="flex flex-col ">
-                <div class="flex items-center justify-between text-white">
+
+            <div class="flex flex-col">
+                <div class="menu-header flex justify-between items-center text-[#F26D29] cursor-pointer">
                     <a href="#" class="flex items-center gap-2">
-                        <i class="fa-solid fa-building-columns "></i>
+                        <i class="fa-solid fa-building-columns"></i>
                         <p>Mes relations banque</p>
                     </a>
-                    <i class="fa-solid fa-angle-up"></i>
+                    <i class="fa-solid fa-angle-up transition-transform duration-300"></i>
                 </div>
-                <div class="ml-8 text-white">
+                <div class="submenu ml-8 text-white hidden">
                     <a href="#">
                         <p>Mes Cartes</p>
                     </a>
-                    <a href="#" class="text-white">
-                        <p>Mes Bénéficiaires</p>
+                    <a href="#">
+                        <p class="text-[#F26D29]">Mes Bénéficiaires</p>
                     </a>
                 </div>
             </div>
-            <div class="flex flex-col ">
-                <div class="flex justify-between items-center text-white">
+
+            <div class="flex flex-col">
+                <div class="menu-header flex justify-between items-center text-white cursor-pointer">
                     <a href="#" class="flex items-center gap-2">
                         <i class="fa-solid fa-arrows-rotate"></i>
-                        <p>Mes opértaions</p>
+                        <p>Mes opérations</p>
                     </a>
-                    <i class="fa-solid fa-angle-up"></i>
+                    <i class="fa-solid fa-angle-up transition-transform duration-300"></i>
                 </div>
-                <div class="ml-8 text-white">
+                <div class="submenu ml-8 text-white hidden">
                     <a href="#">
                         <p>Virement</p>
                     </a>
@@ -72,38 +76,41 @@
                         <p>Recharge</p>
                     </a>
                     <a href="#">
-                        <p>Payement de facteurs</p>
+                        <p>Paiement de factures</p>
                     </a>
                 </div>
             </div>
+
             <div class="flex flex-col">
-                <div class="flex justify-between items-center text-[#F26D29]">
+                <div class="menu-header flex justify-between items-center text-white cursor-pointer">
                     <a href="#" class="flex items-center gap-2">
                         <i class="fa-solid fa-file-lines"></i>
                         <p>Mes Demandes En ligne</p>
                     </a>
-                    <i class="fa-solid fa-angle-up"></i>
+                    <i class="fa-solid fa-angle-up transition-transform duration-300"></i>
                 </div>
-                <div class="ml-8 text-[#F26D29]">
+                <div class="submenu ml-8 text-white hidden">
                     <a href="#">
                         <p>Demande de RIB</p>
                     </a>
                 </div>
             </div>
-            <div class="">
+
+            <div>
                 <a href="#" class="flex items-center text-white gap-2">
-                    <i class="fa-solid fa-right-left "></i>
+                    <i class="fa-solid fa-right-left"></i>
                     <p>Convertisseur</p>
                 </a>
             </div>
-            <div class="">
+
+            <div>
                 <a href="#" class="flex items-center text-white gap-2">
                     <i class="fa-solid fa-rotate-left"></i>
                     <p>Historique</p>
                 </a>
             </div>
         </div>
-        </div>
+
     </footer>
 
     <section>
@@ -122,6 +129,8 @@
             <i class="fa-solid fa-file-arrow-down"></i>
             Télécharger</button>
     </section>
+
+    <script src="footer.js"></script>
 </body>
 
 </html>
