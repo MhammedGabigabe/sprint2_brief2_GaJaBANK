@@ -21,7 +21,8 @@ container.addEventListener("click", (e) =>{
    }
    localStorage.setItem("bénificiaires", JSON.stringify(nouvelle_bénificiere));
 
-})
+});
+
 
 openBtn.addEventListener('click', () => popup.classList.remove('hidden'));
 closeBtn.addEventListener('click', () => popup.classList.add('hidden'));
@@ -70,7 +71,7 @@ newDiv.setAttribute("data-index",i);
       <div class="mr-4 flex items-center gap-2">
           <a href="#">Active</a>
           <label class="cursor-pointer relative">
-              <input type="checkbox" value="" checked class="sr-only peer" id="active">
+              <input type="checkbox" value="" ${liste[i].status === "active" ? "checked" : ""} class="sr-only peer" id="active">
               <div class="w-8 h-4 bg-gray-300 rounded-full peer-checked:bg-green-400 after:absolute after:bg-white 
                   after:rounded-full after:h-4 after:w-4 peer-checked:after:translate-x-full"></div>
           </label>

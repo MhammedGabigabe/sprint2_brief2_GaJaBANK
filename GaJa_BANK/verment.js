@@ -43,10 +43,13 @@ if(bénificiaires[i].identifiant==userConnected.comptes.comptePrincipal.identifi
  const regexMontant= /^[1-9]{3,20}$/;
  const regexMotif=/^[a-zA-ZÀ-ÿ\s]+$/;
  
-
+let etat = JSON.parse(localStorage.getItem("etat_carte"))
 confirme.addEventListener("click",() => {
+if(etat.status==="active"){
+
+
     if(regexMontant.test(montant.value.trim()) && regexMotif.test(motif.value.trim())){
-        alert("djfv:kj")
+       
         if(montant.value<=solde_actuelle){
 
          const verments=JSON.parse(localStorage.getItem("verments")) || [];
@@ -72,6 +75,8 @@ localStorage.setItem("userConnected", JSON.stringify(userConnected));
   
     }else{
         alert("les champs doit avoir valide");
+    } }else{
+        alert("cette carte boncaire inactive");
     }
    
 
