@@ -8,96 +8,109 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="flex gap-8">
+<body class="flex">
 
    
-    <footer 
-        id="footer" 
-        class="bg-[#003269] h-[100vh] w-0 md:w-[320px] transition-all duration-300 overflow-hidden md:block fixed md:relative left-0 top-0 z-50"
-    >
-        <a href="javascript:void(0)" 
-           class="closebtn md:hidden block text-white text-3xl p-4 cursor-pointer" 
-           onclick="closeNav()">&times;</a>
+    <footer class="bg-[#003269] h-[100vh] w-80 flex flex-col">
 
-        <div class="flex justify-center -mt-4 md:mt-0">
-            <img src="image/logo.png" alt="" class="w-40 h-24 ">
+        <div class="flex justify-center">
+            <img src="./images/logoBANK.png" alt="" class="w-40">
         </div>
 
-      
-        <div class="mt-1">
-            <div class=" ml-4 hover:bg-blue-500 hover:rounded-xl ">
-                <a href="#" class="flex items-center">
-                    <i class="fa-solid fa-house text-[#F26D29] text-[14px] "></i>
-                    <p class="ml-4 text-[#F26D29] text-[14px]">Accueil</p>
+        <div class="ml-4 mr-2 flex flex-col gap-3">
+            <div class="">
+                <a href="#" class="flex items-center gap-2 text-white">
+                    <i class="fa-solid fa-house"></i>
+                    <p class="">Accueil</p>
                 </a>
             </div>
-
-            <div class="flex flex-col ml-4 mt-[5px] md:mt-[18px] relative">
-                <a href="#" class="flex items-center ">
-                    <i class="fa-solid fa-user text-[14px] text-white"></i>
-                    <p class="ml-4 text-white text-[14px]">Mes comptes</p>
-                </a>
-                <i class="fa-solid fa-angle-up text-white absolute right-4 top-2"></i>
-
-                <div class="ml-12">
-                    <p class="text-white text-[14px] cursor-pointer" id="mescomptec">Mes comptes Chéques</p>
-                    <p class="text-white mt-2 text-[14px]">Mes comptes d’épargne</p>
+            <div class="flex flex-col">
+                <div class="menu-header text-white flex justify-between items-center cursor-pointer">
+                    <a href="#" class="flex items-center gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Mes comptes</p>
+                    </a>
+                    <i class="fa-solid fa-angle-up transition-transform duration-300"></i>
+                </div>
+                <div class="submenu ml-8 text-white hidden">
+                    <a href="#">
+                        <p>Mes comptes chèques</p>
+                    </a>
+                    <a href="#">
+                        <p>Mes comptes d’épargne</p>
+                    </a>
                 </div>
             </div>
 
-            <div class="flex flex-col ml-4 mt-[5px] md:mt-[18px] relative">
-                <a href="#" class="flex items-center ">
-                    <i class="fa-solid fa-building-columns text-white text-[14px]"></i>
-                    <p class="ml-4 text-white  text-[14px]">Mes Relations Banque</p>
-                </a>
-                <i class="fa-solid fa-angle-up text-white absolute right-4 top-2"></i>
-
-                <div class="ml-12">
-                    <p class="text-white text-[14px]">Mes Cartes</p>
-                    <p class="text-white mt-2 text-[14px]">Mes Bénéficiaires</p>
+            <div class="flex flex-col">
+                <div class="menu-header flex justify-between items-center text-[#F26D29] cursor-pointer">
+                    <a href="#" class="flex items-center gap-2">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <p>Mes relations banque</p>
+                    </a>
+                    <i class="fa-solid fa-angle-up transition-transform duration-300"></i>
+                </div>
+                <div class="submenu ml-8 text-white hidden">
+                    <a href="#">
+                        <p>Mes Cartes</p>
+                    </a>
+                    <a href="#">
+                        <p class="text-[#F26D29]">Mes Bénéficiaires</p>
+                    </a>
                 </div>
             </div>
 
-            <div class="flex flex-col ml-4 mt-[5px] md:mt-[18px] relative">
-                <a href="#" class="flex items-center ">
-                    <i class="fa-solid fa-arrows-rotate text-white text-[14px]"></i>
-                    <p class="ml-4 text-white text-[14px]">Mes opérations</p>
-                </a>
-                <i class="fa-solid fa-angle-up text-white absolute right-4 top-2 text-[14px]"></i>
-
-                <div class="ml-12">
-                    <p class="text-white text-[14px]">Virement</p>
-                    <p class="text-white mt-2 text-[14px]">Recharge</p>
-                    <p class="text-white mt-2 text-[14px]">Payement de factures</p>
+            <div class="flex flex-col">
+                <div class="menu-header flex justify-between items-center text-white cursor-pointer">
+                    <a href="#" class="flex items-center gap-2">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                        <p>Mes opérations</p>
+                    </a>
+                    <i class="fa-solid fa-angle-up transition-transform duration-300"></i>
+                </div>
+                <div class="submenu ml-8 text-white hidden">
+                    <a href="#">
+                        <p>Virement</p>
+                    </a>
+                    <a href="#">
+                        <p>Recharge</p>
+                    </a>
+                    <a href="#">
+                        <p>Paiement de factures</p>
+                    </a>
                 </div>
             </div>
 
-            <div class="flex flex-col ml-4 mt-[5px] md:mt-[18px] relative">
-                <a href="#" class="flex items-center">
-                    <i class="fa-solid fa-file-lines text-white text-[14px]"></i>
-                    <p class="ml-4 text-[14px] text-white">Mes Demandes En ligne</p>
-                </a>
-                <i class="fa-solid fa-angle-up text-white absolute right-4 top-2 text-[14px]"></i>
-
-                <div class="ml-12">
-                    <p class="text-white text-[14px]">Demande de RIB</p>
+            <div class="flex flex-col">
+                <div class="menu-header flex justify-between items-center text-white cursor-pointer">
+                    <a href="#" class="flex items-center gap-2">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <p>Mes Demandes En ligne</p>
+                    </a>
+                    <i class="fa-solid fa-angle-up transition-transform duration-300"></i>
+                </div>
+                <div class="submenu ml-8 text-white hidden">
+                    <a href="#">
+                        <p>Demande de RIB</p>
+                    </a>
                 </div>
             </div>
 
-            <div class="flex flex-col ml-4 mt-[5px] md:mt-[18px]">
-                <a href="#" class="flex items-center ">
-                    <i class="fa-solid fa-right-left text-white text-[14px]"></i>
-                    <p class="ml-4 text-white text-[14px]">Convertisseur</p>
+            <div>
+                <a href="#" class="flex items-center text-white gap-2">
+                    <i class="fa-solid fa-right-left"></i>
+                    <p>Convertisseur</p>
                 </a>
             </div>
 
-            <div class="flex flex-col ml-4 mt-[5px] md:mt-[18px]">
-                <a href="#" class="flex items-center ">
-                    <i class="fa-solid fa-rotate-left text-white text-[14px]"></i>
-                    <p class="ml-4 text-white text-[14px]">Historique</p>
+            <div>
+                <a href="#" class="flex items-center text-white gap-2">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <p>Historique</p>
                 </a>
             </div>
         </div>
+
     </footer>
 
   
@@ -149,9 +162,8 @@
 
     </main>
 
-<script src="acceuil.js">
-
-</script>
+<script src="acceuil.js"></script>
+<script src="footer.js"></script>
 
 </body>
 </html>
