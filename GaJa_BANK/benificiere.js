@@ -132,9 +132,9 @@ const checkbox=document.getElementById("active");
 
 checkbox.addEventListener("change", () => {
    if (checkbox.checked) {
-    alert("✅ La checkbox est cochée")
+    alert("La checkbox est cochée")
     } else {
-     alert("❌ La checkbox est décochée");
+     alert("La checkbox est décochée");
     }
 });
 
