@@ -20,16 +20,19 @@ if(etat.identifiant==identifiant && etat.status==="active"){
  if(operateure.value!=="" && type_operation.value!=="" && telephone.value!=="" && solde_recharge.value!=="" && regexN.test(telephone.value)){
     try{
  const recharges=JSON.parse(localStorage.getItem("recharges")) || [];
-    
+     userConnected.comptes.comptePrincipal.solde=userConnected.comptes.comptePrincipal.solde-solde_recharge.value;
+localStorage.setItem("userConnected", JSON.stringify(userConnected));
       const recharge={
     operateure:operateure.value,
     date:new Date(),
     type_operation:type_operation.value,
     solde_recharge:solde_recharge.value,
-    telephone:telephone.value
+    telephone:telephone.value,
+    identifiant:identifiant
    }
    recharges.push(recharge);
    localStorage.setItem("recharges",JSON.stringify(recharges));
+   
     }catch(e){
         alert(e)
     }
@@ -63,6 +66,7 @@ sauvgarder.addEventListener("change", ()=>{
         }
         favories.push(favorise);
         localStorage.setItem("favories",JSON.stringify(favories));
+       
     }
     laodefavorise()
 
