@@ -126,10 +126,3 @@ tri.addEventListener("change", () => {
 });
 const checkbox=document.getElementById("active");
 
-checkbox.addEventListener("change", () => {
-   if (checkbox.checked) {
-    alert("✅ La checkbox est cochée")
-    } else {
-     alert("❌ La checkbox est décochée");
-    }
-});
