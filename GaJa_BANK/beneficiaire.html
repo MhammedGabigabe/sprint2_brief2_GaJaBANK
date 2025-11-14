@@ -11,7 +11,11 @@
 
 <body class="flex ">
 
-    <footer class="bg-[#003269] h-[100vh] w-64 flex flex-col">
+    <footer id="footer"
+        class="bg-[#003269] h-[100vh] w-0 md:w-[320px] transition-all duration-300 overflow-hidden md:block fixed md:relative left-0 top-0 z-50">
+        <a href="javascript:void(0)" class="closebtn md:hidden block text-white text-3xl p-4 cursor-pointer"
+            onclick="closeNav()">&times;</a>
+
 
         <div class="flex justify-center">
             <img src="./images/logoBANK.png" alt="" class="w-40">
@@ -113,19 +117,21 @@
 
     </footer>
 
-    <section class="w-[80%] mt-8">
-
-        <div class="flex items-center justify-around ">
-            <p class="text-[#F26D29] text-3xl">Mes bénéficiaires</p>
-            <div class="h-[1px] bg-[#F26D29] w-[60%] mt-6"></div>
+    <section class="w-full mt-8 p-4 md:w-[80%] md:mt-8 md:p-8">
+        <div class="w-full md:hidden p-4">
+            <span class="text-3xl cursor-pointer text-orange-500" onclick="openNav()">&#9776;</span>
+        </div>
+        <div class="flex items-center justify-around px-4 ">
+            <p class="text-[#F26D29] text-2xl md:text-3xl">Mes bénéficiaires</p>
+            <div class="hidden md:h-[1px] md:bg-[#F26D29] md:w-[60%] md:mt-6"></div>
             <button class="bg-[#F26D29] text-white text-xl rounded-full w-10 h-10 flex justify-center items-center"
                 id="openBtn">
                 +</button>
         </div>
 
 
-        <div class="flex justify-center mt-10">
-            <div class="grid grid-cols-2 gap-2 w-[50%]">
+        <div class="flex flex-col sm:flex-row items-center justify-around">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full sm:w-[50%]">
 
                 <div class="flex justify-start">
                     <div class="relative w-52">
@@ -133,7 +139,9 @@
           outline-none text-gray-900 text-base p-2 bg-transparent rounded-none" />
                         <label for="recherche" class="absolute left-0 text-gray-500 text-base bg-white px-1 transition-all duration-300 
           peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base 
-          peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+          peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+           peer-[&:not(:placeholder-shown)]:-top-3
+    peer-[&:not(:placeholder-shown)]:text-sm">
                             Rechercher*
                         </label>
                     </div>
@@ -141,21 +149,25 @@
 
                 <div class="flex justify-end">
                     <div class="relative w-52">
-                        <select id="tri" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 
-          outline-none text-gray-900 text-base p-2 bg-transparent rounded-none appearance-none">
-                            <option value="" disabled selected hidden></option>
+                        <select id="tri" required class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 
+        outline-none text-gray-900 text-base p-2 bg-transparent rounded-none appearance-none">
+                            <option value="" disabled selected hidden></option> <!-- option vide pour placeholder -->
                             <option value="nom">Nom</option>
                             <option value="date">Date</option>
                             <option value="active">Active</option>
-                            <option value="Inactive">Inactive</option>
+                            <option value="inactive">Inactive</option>
                         </select>
+
                         <label for="tri" class="absolute left-0 text-gray-500 text-base bg-white px-1 transition-all duration-300
-          peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base
-          peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+        top-2
+        peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+        peer-valid:-top-3 peer-valid:text-sm">
                             Trier par :
                         </label>
                     </div>
                 </div>
+
+
 
 
                 <div id="resultats" class="col-span-2 w-full"></div>
@@ -167,7 +179,7 @@
     </section>
 
     <div id="popup" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center z-50">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-6 relative">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-6 relative sm:p-8">
             <h2 class="text-xl font-bold mb-4 text-center text-orange-500">Ajouter Bénéficiaires</h2>
 
             <form id="form" class="space-y-4">

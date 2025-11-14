@@ -7,13 +7,16 @@
     <title>Demande RIB-GaJa BANK</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 </head>
 
 <body class="flex">
 
-     <footer class="bg-[#003269] h-[100vh] w-64 flex flex-col">
+    <footer id="footer"
+        class="bg-[#003269] h-[100vh] w-0 md:w-[320px] transition-all duration-300 overflow-hidden md:block fixed md:relative left-0 top-0 z-50">
+        <a href="javascript:void(0)" class="closebtn md:hidden block text-white text-3xl p-4 cursor-pointer"
+            onclick="closeNav()">&times;</a>
 
         <div class="flex justify-center">
             <img src="./images/logoBANK.png" alt="" class="w-40">
@@ -116,9 +119,13 @@
     </footer>
 
     <section>
+        <div class="w-full md:hidden p-4">
+            <span class="text-3xl cursor-pointer text-orange-500" onclick="openNav()">&#9776;</span>
+        </div>
+
         <div class="flex items-center gap-4 m-10 w-[75vw]">
             <p class="text-[#F26D29] text-2xl  ">Compte</p>
-            <div class="h-[1px] bg-[#F26D29] w-full mt-8"></div>
+            <div class="hidden md:h-[1px] md:bg-[#F26D29] md:w-full mt-8"></div>
         </div>
         <div class="ml-10 mr-10 ">
             <p class="text-gray-600" id="nom_user">M. MOHAMMED JAJAA</p>
@@ -127,7 +134,8 @@
         </div>
         <p class="mt-10 ml-10">RIB :</p>
         <p class="text-blue-600 ml-10" id="rib_user">121343123456789987654300</p>
-        <button id="telecharger" class="text-[#F26D29]  border-[1px] border-[#F26D29] mt-10 ml-10  p-2 arround rounded-xl w-48">
+        <button id="telecharger"
+            class="text-[#F26D29]  border-[1px] border-[#F26D29] mt-10 ml-10  p-2 arround rounded-xl w-48">
             <i class="fa-solid fa-file-arrow-down"></i>
             Télécharger</button>
     </section>

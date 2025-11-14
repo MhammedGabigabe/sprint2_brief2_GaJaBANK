@@ -11,7 +11,10 @@
     
 </head>
 <body class="flex gap-8">
-      <footer class="bg-[#003269] h-[100vh] w-80 flex flex-col">
+      <footer id="footer"
+        class="bg-[#003269] h-[100vh] w-0 md:w-[320px] transition-all duration-300 overflow-hidden md:block fixed md:relative left-0 top-0 z-50">
+        <a href="javascript:void(0)" class="closebtn md:hidden block text-white text-3xl p-4 cursor-pointer"
+            onclick="closeNav()">&times;</a>
 
         <div class="flex justify-center">
             <img src="./images/logoBANK.png" alt="" class="w-40">
@@ -116,6 +119,9 @@
 
     <main class="w-[100%] flex flex-col gap-7 mt-4">
 
+        <div class="w-full md:hidden p-4">
+            <span class="text-3xl cursor-pointer text-orange-500" onclick="openNav()">&#9776;</span>
+        </div>
         <div class="flex items-end ">
             <h1 class="font-bold text-[#F26D29] ">Virement</h1>
             <div class="h-[0.5px] bg-[#F26D29] w-[60%] ml-4"></div>

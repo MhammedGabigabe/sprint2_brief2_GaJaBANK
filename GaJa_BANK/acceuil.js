@@ -4,16 +4,7 @@ const solde = document.getElementById("solde");
 const eye = document.getElementById("eye");
 const mescomptec=document.getElementById("mescomptec");
 const footer=document.getElementById("footer");
- function closeNav(){
- footer.classList.remove("w-[320px]");
- footer.classList.add("w-[0px]");
- }
-
- function openNav(){
-    
- footer.classList.remove("w-[0px]");
- footer.classList.add("w-[320px]");
- }
+ 
 let userConnected = JSON.parse(localStorage.getItem("userConnected"));
 
 mescomptec.addEventListener("click", () =>{
