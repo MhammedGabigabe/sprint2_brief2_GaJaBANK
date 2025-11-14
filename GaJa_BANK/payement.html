@@ -124,45 +124,47 @@
 
     <div class="grid grid-cols-2 gap-8 mx-16">
 
-
-
-      <div class="relative   ">
-        <label class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300"> Type de
-          factures:</label>
-        <input list="factures" name="facteures" placeholder="facteures"
+      <div class="relative">
+        <input list="factures" id="fact" name="facteures" placeholder=" "
           class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
+
+        <label class="absolute left-2 top-2 text-gray-500 text-base bg-white px-1 transition-all duration-300 
+        peer-placeholder-shown:top-2 
+        peer-placeholder-shown:text-gray-400
+        peer-placeholder-shown:text-base
+        peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+        peer-[&:not(:placeholder-shown)]:-top-3
+        peer-[&:not(:placeholder-shown)]:text-sm">
+          Type de factures:
+        </label>
+
         <datalist id="factures">
-          <option value="Factures">
+          <option value="Eau">
+          <option value="Électricité">
+          <option value="Internet">
         </datalist>
-
-   <div class="relative   ">
- <label  class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300"> Type de factures:</label>
-    <input list="factures" id="fact"   name="facteures" placeholder="facteures" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
-<datalist id="factures" >
-<option  value="Factures">
-</datalist>
-
-
       </div>
 
 
-      <div class="relative   ">
-        <label class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300">
-          Fournisseur:</label>
-        <input list="Fournisseur" name="Fournisseur" placeholder="Fournisseur"
+      <div class="relative">
+        <input list="Fournisseur" id="four" name="Fournisseur" placeholder=" "
           class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
+
+        <label class="absolute left-2 top-2 text-gray-500 text-base bg-white px-1 transition-all duration-300 
+        peer-placeholder-shown:top-2 
+        peer-placeholder-shown:text-gray-400
+        peer-placeholder-shown:text-base
+        peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+        peer-[&:not(:placeholder-shown)]:-top-3
+        peer-[&:not(:placeholder-shown)]:text-sm">
+          Fournisseur:
+        </label>
+
         <datalist id="Fournisseur">
-          <option value="Fournisseur">
+          <option value="ONEE">
+          <option value="IAM">
+          <option value="Inwi">
         </datalist>
-
-     <div class="relative   ">
- <label  class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300"> Fournisseur:</label>
-    <input list="Fournisseur" id="four"  name="Fournisseur" placeholder="Fournisseur" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
-<datalist id="Fournisseur" >
-<option  value="Fournisseur">
-</datalist>
-
-
       </div>
 
 
@@ -178,7 +180,9 @@
              peer-placeholder-shown:top-2 
              peer-placeholder-shown:text-gray-400 
              peer-placeholder-shown:text-base 
-             peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+             peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+             peer-[&:not(:placeholder-shown)]:-top-3
+        peer-[&:not(:placeholder-shown)]:text-sm">
           Références*
         </label>
       </div>
@@ -193,8 +197,9 @@
              peer-placeholder-shown:top-2 
              peer-placeholder-shown:text-gray-400 
              peer-placeholder-shown:text-base 
-             peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
-
+             peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+             peer-[&:not(:placeholder-shown)]:-top-3
+        peer-[&:not(:placeholder-shown)]:text-sm">
           Montant*
         </label>
       </div>
@@ -206,34 +211,18 @@
 
 
     <div class="flex justify-center gap-12 mt-4">
-      <button class="w-52 bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl">Payer</button>
-      <button class="w-52  bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl">Annuler</button>
+      <button class="w-52 bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl"
+        id="payer">Payer</button>
+      <button class="w-52  bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl"
+        id="annuler">Annuler</button>
     </div>
 
   </main>
 
 
+
   <script src="footer.js"></script>
-
- Montant*
-    </label>
-  </div>
-
-   
-
-
-        </div>
-
-
-        <div class="flex justify-center gap-12 mt-4">
-            <button class="w-52 bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl" id="payer">Payer</button>
-            <button class="w-52  bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl" id="annuler">Annuler</button>
-         </div>
-
-        </main>
-
-
-<script src="payement.js"></script>
+  <script src="payement.js"></script>
 
 </body>
 
