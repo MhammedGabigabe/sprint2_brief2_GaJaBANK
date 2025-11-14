@@ -11,30 +11,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="font-[Poppins] overflow-hidden">
-    <header>
-        <div class="flex justify-between border-b-2 border-[#F26D29] ">
-            <img src="./images/logoBANK.png" alt="logo GAJA BANK" class="w-32">
-            <div class="flex items-center gap-2 mr-8">
-                <button
-                    id="btn-inscrire"
-                    class="bg-[#00AFF0] rounded-full w-36 h-10 text-white text-lg  ">S'inscrire</button>
-                <button
-                    id="btn-connecter"
-                    class="border-[1px] border-[#00AFF0] rounded-full w-36 h-10 text-[#F26D29] text-lg">Se
-                    connecte</button>
-            </div>
+<body class="font-[Poppins] md:overflow-hidden">
+    <!--Header-->
+    <header class="flex justify-between justify-center p-1 border-b-2 border-[#F26D29]">
+
+        <img src="./images/logoBANK.png" alt="logo GaJa BANK" class="w-28 sm:w-36">
+        <div class="flex items-center gap-2 sm:gap-4 mr-2 sm:mr-8">
+            <button id="btn-inscrire"
+                class="bg-[#00AFF0] rounded-full px-3 py-1 sm:px-6 sm:py-2 text-white text-sm sm:text-lg ">S'inscrire</button>
+            <button id="btn-connecter"
+                class="border border-[#00AFF0] rounded-full px-3 py-1 sm:px-6 sm:py-2 text-[#F26D29] text-sm sm:text-lg">Se
+                connecte</button>
         </div>
+
     </header>
-    <section class="bg-[url('./images/bg-hero.png')] h-[85vh] w-full flex items-center">
-        <div class="flex flex-col gap-12 ml-24">
+
+    <!--Hero-->
+    <section
+        class="bg-[url('./images/bg-hero.png')] bg-cover bg-center w-full flex flex-col-reverse md:flex-row items-center md:justify-between p-6 md:p-0">
+        <div class="flex flex-col gap-6 md:gap-12 md:ml-24 text-center md:text-left">
             <p class="text-[#F26D29] text-3xl">Ouvrez votre compte bancaire en ligne en toute simplicité
             </p>
-            <p class="text-gray-600">Télécharger l'application <span
+            <p class="text-gray-600 text-sm md:text-base">Télécharger l'application <span
                     class="text-[#ff0000] font-semibold">GaJa Mobile</span> et ouvrer un compte bancaire 100% en
-                ligne<br> juste en quelque étapes simples et sans vous déplacer en agence.</p>
-            <div class="flex gap-6 ml-24">
-                <div class="flex gap-4 border border-black rounded-md p-2 w-48 h-20">
+                ligne<br class="hidden md:block"> juste en quelque étapes simples et sans vous déplacer en agence.</p>
+
+            <div class="flex flex-col md:flex-row gap-4 md:gap-6 md:ml-24 items-center">
+                <div class="flex gap-3 border border-black rounded-md p-2 w-48 md:h-20">
                     <div class="text-5xl">
                         <i class="fa-brands fa-apple "></i>
                     </div>
@@ -55,8 +58,8 @@
                 </div>
             </div>
         </div>
-        <div>
-            <img src="./images/mobile.png" alt="mobile hero" class="slow-bounce w-80 mr-8">
+        <div class="mb-6 md:mb-0">
+            <img src="./images/mobile.png" alt="mobile hero" class="slow-bounce w-52 sm:w-52 md:w-80 mx-auto">
         </div>
     </section>
     <script src="index.js"></script>
