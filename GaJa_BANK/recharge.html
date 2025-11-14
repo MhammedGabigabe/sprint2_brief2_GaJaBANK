@@ -125,10 +125,17 @@
                     <div class="relative w-52">
                         <select id="operateure" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 
                             outline-none text-gray-900 text-base p-2 bg-transparent rounded-none appearance-none">
+
                             <option value="" disabled selected ></option>
                             <option value="nom">Inwi</option>
                             <option value="date">IAM</option>
                             <option value="date">Orange</option>
+
+                            <option value="" disabled selected hidden></option>
+                            <option value="Inwi">Inwi</option>
+                            <option value="IAM">IAM</option>
+                            <option value="Orange">Orange</option>
+
                         </select>
                         <label for="tri" class="absolute left-0 text-gray-500 text-base bg-white px-1 transition-all duration-300
                             peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base
@@ -141,10 +148,17 @@
                     <div class="relative w-52">
                         <select id="type-operation" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 
                             outline-none text-gray-900 text-base p-2 bg-transparent rounded-none appearance-none">
+
                             <option value="" disabled selected ></option>
                             <option value="nom">*2</option>
                             <option value="date">*3</option>
                             <option value="date">*6</option>
+
+                            <option value="" disabled selected hidden></option>
+                            <option value="*2">*2</option>
+                            <option value="*3">*3</option>
+                            <option value="*6">*6</option>
+
                         </select>
                         <label for="tri" class="absolute left-0 text-gray-500 text-base bg-white px-1 transition-all duration-300
                             peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base
@@ -169,10 +183,10 @@
                         <select id="solde_recharge" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 
                             outline-none text-gray-900 text-base p-2 bg-transparent rounded-none appearance-none">
                             <option value="" disabled selected hidden></option>
-                            <option value="nom">10 DH</option>
-                            <option value="date">20 DH</option>
-                            <option value="date">50 DH</option>
-                            <option value="date">100 DH</option>
+                            <option value="10">10 DH</option>
+                            <option value="20">20 DH</option>
+                            <option value="50">50 DH</option>
+                            <option value="100">100 DH</option>
                         </select>
                         <label for="tri" class="absolute left-0 text-gray-500 text-base bg-white px-1 transition-all duration-300
                             peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base
@@ -198,24 +212,13 @@
             <div class="bg-gray-100 w-[40%] h-full rounded-2xl border-t-2 border-[#F26D29]">
                 <p class="text-xl text-[#F26D29] ml-6 mt-4 mb-4">Mes favoris</p>
                 <div class="ml-12">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-white p-2 flex justify-between rounded-xl w-[70%]">
-                            <p>0601020304</p>
-                            <a href="#"><i class="fa-solid fa-trash text-[#F26D29]"></i></a>
-                        </div>
-                        <div class="bg-white p-2 flex justify-between rounded-xl w-[70%]">
-                            <p>0601020305</p>
-                            <a href="#"><i class="fa-solid fa-trash text-[#F26D29]"></i></a>
-                        </div>
-                        <div class="bg-white p-2 flex justify-between rounded-xl w-[70%]">
-                            <p>0601020306</p>
-                            <a href="#"><i class="fa-solid fa-trash text-[#F26D29]"></i></a>
-                        </div>
+                    <div class="grid grid-cols-2 gap-4" id="containner">
+                       
                     </div>
                 </div>
             </div>
         </div>
-
+<script src="recharge.js"></script>
     </section>
 <script src="footer.js"></script>
 </body>
