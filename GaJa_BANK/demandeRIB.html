@@ -7,6 +7,8 @@
     <title>Demande RIB-GaJa BANK</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 </head>
 
 <body class="flex">
@@ -119,18 +121,22 @@
             <div class="h-[1px] bg-[#F26D29] w-full mt-8"></div>
         </div>
         <div class="ml-10 mr-10 ">
-            <p class="text-gray-600">M. MOHAMMED JAJAA</p>
-            <p class="text-blue-600">1234567899876543</p>
+            <p class="text-gray-600" id="nom_user">M. MOHAMMED JAJAA</p>
+            <p class="text-blue-600" id="nemero_user">1234567899876543</p>
             <div class="h-[1px] bg-gray-300 mt-2"></div>
         </div>
         <p class="mt-10 ml-10">RIB :</p>
-        <p class="text-blue-600 ml-10">121 343 <span>1234567899876543</span> 00</p>
-        <button class="text-[#F26D29]  border-[1px] border-[#F26D29] mt-10 ml-10  p-2 arround rounded-xl w-48">
+        <p class="text-blue-600 ml-10" id="rib_user">121343123456789987654300</p>
+        <button id="telecharger" class="text-[#F26D29]  border-[1px] border-[#F26D29] mt-10 ml-10  p-2 arround rounded-xl w-48">
             <i class="fa-solid fa-file-arrow-down"></i>
             Télécharger</button>
     </section>
 
+
     <script src="footer.js"></script>
+
+    <script src="demande.js"></script>
+
 </body>
 
 </html>

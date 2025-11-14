@@ -20,7 +20,7 @@ if(etat.identifiant==identifiant && etat.status==="active"){
             facteure:facteure.value,
             fournisseure:fournisseure.value,
             montant:montant.value,
-            date:new Date(),
+            date:new Date().toISOString().slice(0, 10),
             identifiant:identifiant
         }
         payements.push(payement);

@@ -24,7 +24,7 @@ if(etat.identifiant==identifiant && etat.status==="active"){
 localStorage.setItem("userConnected", JSON.stringify(userConnected));
       const recharge={
     operateure:operateure.value,
-    date:new Date(),
+    date: new Date().toISOString().slice(0, 10),
     type_operation:type_operation.value,
     solde_recharge:solde_recharge.value,
     telephone:telephone.value,
