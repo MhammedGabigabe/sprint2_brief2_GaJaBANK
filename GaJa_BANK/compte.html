@@ -10,7 +10,10 @@
 </head>
 
 <body class="flex">
-    <footer class="bg-[#003269] h-[100vh] w-64 flex flex-col">
+        <footer id="footer"
+        class="bg-[#003269] h-[100vh] w-0 md:w-[320px] transition-all duration-300 overflow-hidden md:block fixed md:relative left-0 top-0 z-50">
+        <a href="javascript:void(0)" class="closebtn md:hidden block text-white text-3xl p-4 cursor-pointer"
+            onclick="closeNav()">&times;</a>
 
         <div class="flex justify-center">
             <img src="./images/logoBANK.png" alt="" class="w-40">
@@ -112,11 +115,13 @@
 
     </footer>
     <section class="ml-12 mt-6 w-[75%] mr-16">
-
+<div class="w-full md:hidden p-4">
+            <span class="text-3xl cursor-pointer text-orange-500" onclick="openNav()">&#9776;</span>
+        </div>
         <div>
             <div class="flex justify-between items-center">
-                <p class="text-[#F26D29] text-3xl mb-8">Mes comptes chéques</p>
-                <div class="h-[1px] bg-[#F26D29] w-[65%] "></div>
+                <p class="text-[#F26D29] text-xl md:text-3xl mb-8">Mes comptes chéques</p>
+                <div class="hidden md:h-[1px] md:bg-[#F26D29] md:w-[65%] "></div>
             </div>
 
             <div class="ml-10 mb-10 text-gray-800 ">
@@ -127,10 +132,10 @@
         </div>
         <div>
             <div class="flex justify-between items-center">
-                <p class="text-[#F26D29] text-3xl mb-8">Opérations</p>
-                <div class="h-[1px] bg-[#F26D29] w-[81%] "></div>
+                <p class="text-[#F26D29] text-xl md:text-3xl mb-8">Opérations</p>
+                <div class="hidden md:h-[1px] md:bg-[#F26D29] md:w-[81%] "></div>
             </div>
-            <div class="grid grid-cols-2 gap-4 ml-10 mb-10 ">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 ml-10 mb-10 ">
                 <div>
                     <p id="date-operation" class="text-blue-600">01/11/2025</p>
                     <div class="bg-gray-200 flex justify-between rounded-lg p-2 text-gray-800">

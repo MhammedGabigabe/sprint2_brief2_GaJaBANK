@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes Cartes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="flex gap-8">
-    <footer class="bg-[#003269] h-[100vh] w-80 flex flex-col">
+    <footer id="footer"
+        class="bg-[#003269] h-[100vh] w-0 md:w-[320px] transition-all duration-300 overflow-hidden md:block fixed md:relative left-0 top-0 z-50">
+        <a href="javascript:void(0)" class="closebtn md:hidden block text-white text-3xl p-4 cursor-pointer"
+            onclick="closeNav()">&times;</a>
 
         <div class="flex justify-center">
             <img src="./images/logoBANK.png" alt="" class="w-40">
@@ -53,7 +58,7 @@
                         <p class="text-[#F26D29]">Mes Cartes</p>
                     </a>
                     <a href="beneficiaire.html">
-                        <p >Mes Bénéficiaires</p>
+                        <p>Mes Bénéficiaires</p>
                     </a>
                 </div>
             </div>
@@ -113,71 +118,79 @@
 
 
     <main class="w-[100%] flex flex-col gap-7 mt-4">
+
+        <div class="w-full md:hidden p-4">
+            <span class="text-3xl cursor-pointer text-orange-500" onclick="openNav()">&#9776;</span>
+        </div>
         <div class="flex items-end ">
             <h1 class="font-bold text-[#F26D29] ">Mes Cartes</h1>
             <div class="h-[0.5px] bg-[#F26D29] w-[60%] ml-4"></div>
         </div>
 
-       <div class="bg-[url('image/imagecarte.png')] w-[380px] h-52 bg-cover bg-center flex flex-col gap-3">
-        <div class="mt-2 flex items-center">
-            <img src="image/imagel.png" alt="" class="w-[100px] h-[60px]">
-            <h3 class="text-white -mt-2 -ml-4 font-bold">GaJa BANK</h3>
-        </div>
-        <div class="ml-8">
-            <img src="image/image.png" alt="" class="w-[60px] h-[30px]">
-        </div>
-          <div class="flex items-center justify-around">
-    <p class="text-white font-bold -ml-4" id="rib">5476 9821 3456 2109</p>
-    <p class="text-white font-bold -mt-4 -ml-16">Compte <br> carte bancaire</p>
-          </div>
-    
-        <p class="text-white font-bold ml-8" id="Expiration">Expiration : 12/09</p>
-
-
-       </div>
-
-
-        <div class="flex justify-between items-center ml-4 w-[340px] border-[1px] p-2 border-[#F26D29] rounded-xl bg-[#EFEEEE]">
-            <div>
-  <h3 class="font-bold">Blocage</h3>
-            <p class="text-[#8C8D90] text-sm " id="cartebv_or_in">Carte débloquée</p>
+        <div class="bg-[url('image/imagecarte.png')] w-[380px] h-52 bg-cover bg-center flex flex-col gap-3">
+            <div class="mt-2 flex items-center">
+                <img src="image/imagel.png" alt="" class="w-[100px] h-[60px]">
+                <h3 class="text-white -mt-2 -ml-4 font-bold">GaJa BANK</h3>
             </div>
-          
+            <div class="ml-8">
+                <img src="image/image.png" alt="" class="w-[60px] h-[30px]">
+            </div>
+            <div class="flex items-center justify-around">
+                <p class="text-white font-bold -ml-4" id="rib">5476 9821 3456 2109</p>
+                <p class="text-white font-bold -mt-4 -ml-16">Compte <br> carte bancaire</p>
+            </div>
+
+            <p class="text-white font-bold ml-8" id="Expiration">Expiration : 12/09</p>
+
+
+        </div>
+
+
+        <div
+            class="flex justify-between items-center ml-4 w-[340px] border-[1px] p-2 border-[#F26D29] rounded-xl bg-[#EFEEEE]">
             <div>
-  <label class="relative inline-flex items-center cursor-pointer ">
-    <input type="checkbox" value="" checked class="sr-only peer" id="carte_status">
-    <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-green-600 
+                <h3 class="font-bold">Blocage</h3>
+                <p class="text-[#8C8D90] text-sm " id="cartebv_or_in">Carte débloquée</p>
+            </div>
+
+            <div>
+                <label class="relative inline-flex items-center cursor-pointer ">
+                    <input type="checkbox" value="" checked class="sr-only peer" id="carte_status">
+                    <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-green-600 
                 after:content-[''] after:absolute after:top-[2px] after:left-[1px] after:bg-white 
                 after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 
                 after:transition-all peer-checked:after:translate-x-full"></div>
-  </label>
+                </label>
             </div>
         </div>
 
-         <div class="flex items-end ml-2">
+        <div class="flex items-end ml-2">
             <h1 class="font-semibold text-[#F26D29] ">Plafond</h1>
             <div class="h-[0.5px] bg-[#F26D29] w-[60%] ml-4"></div>
         </div>
-     
+
         <div class="flex">
 
-        
-        <div class="flex flex-col gap-3 items-center w-[440px] ">
-            <h3  class="-ml-[210px]">PLAFAND DE RETRAIT</h3>
-            <p class="text-gray-600">vous disposez d’un plafond de retrait de 30000 Dhs</p>
-            <input type="text" value="30000 MAD" class="focus:border-0 focus:outline-none bg-[#EFEEEE] p-2 text-[#008000] w-[300px] text-center">
-        </div>
 
-         <div class="flex flex-col gap-3 items-center w-[440px] ">
-            <h3  class="-ml-[175px]">PLAFOND DE PAIMENT INTERNET</h3>
-            <p class="text-gray-600 ml-8">vous disposez d’un plafond de paiment tpe de 30000 Dhs</p>
-            <input type="text" value="30000 MAD" class="focus:border-0 focus:outline-none bg-[#EFEEEE] p-2 text-[#008000] w-[300px] text-center">
-        </div>
+            <div class="flex flex-col gap-3 items-center w-[440px] ">
+                <h3 class="-ml-[210px]">PLAFAND DE RETRAIT</h3>
+                <p class="text-gray-600">vous disposez d’un plafond de retrait de 30000 Dhs</p>
+                <input type="text" value="30000 MAD"
+                    class="focus:border-0 focus:outline-none bg-[#EFEEEE] p-2 text-[#008000] w-[300px] text-center">
+            </div>
+
+            <div class="flex flex-col gap-3 items-center w-[440px] ">
+                <h3 class="-ml-[175px]">PLAFOND DE PAIMENT INTERNET</h3>
+                <p class="text-gray-600 ml-8">vous disposez d’un plafond de paiment tpe de 30000 Dhs</p>
+                <input type="text" value="30000 MAD"
+                    class="focus:border-0 focus:outline-none bg-[#EFEEEE] p-2 text-[#008000] w-[300px] text-center">
+            </div>
 
         </div>
 
     </main>
-<script src="cartes.js"></script>
-<script src="footer.js"></script>
+    <script src="cartes.js"></script>
+    <script src="footer.js"></script>
 </body>
+
 </html>
