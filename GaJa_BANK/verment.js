@@ -3,6 +3,7 @@ const namec=document.getElementById("name");
 const ribc=document.getElementById("rib");
 const soldec=document.getElementById("solde");
 const Bénéficiaires=document.getElementById("Bénéficiaires");
+const Bénéficiaire_input=document.getElementById("Bénéficiaire");
 const montant=document.getElementById("montant");
 const motif=document.getElementById("motif");
 const confirme=document.getElementById("confirme");
@@ -45,6 +46,7 @@ if(bénificiaires[i].identifiant==userConnected.comptes.comptePrincipal.identifi
  
 let etat = JSON.parse(localStorage.getItem("etat_carte"))
 confirme.addEventListener("click",() => {
+
 if(etat.status==="active"){
 
 
@@ -55,12 +57,13 @@ if(etat.status==="active"){
          const verments=JSON.parse(localStorage.getItem("verments")) || [];
     
      const verment={
-      nom_b:Bénéficiaires.value,
-      date:new Date(),
+      nom_b:Bénéficiaire_input.value,
+      date: new Date().toISOString().slice(0, 10),
       montant:montant.value,
       motif:motif.value,
       identifiant:identifiant
  }
+
  verments.push(verment);
  localStorage.setItem("verments",JSON.stringify(verments));
  userConnected.comptes.comptePrincipal.solde=userConnected.comptes.comptePrincipal.solde-montant.value;
