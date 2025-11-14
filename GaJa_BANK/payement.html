@@ -127,7 +127,7 @@
 
    <div class="relative   ">
  <label  class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300"> Type de factures:</label>
-    <input list="factures"  name="facteures" placeholder="facteures" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
+    <input list="factures" id="fact"   name="facteures" placeholder="facteures" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
 <datalist id="factures" >
 <option  value="Factures">
 </datalist>
@@ -136,7 +136,7 @@
 
      <div class="relative   ">
  <label  class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300"> Fournisseur:</label>
-    <input list="Fournisseur"  name="Fournisseur" placeholder="Fournisseur" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
+    <input list="Fournisseur" id="four"  name="Fournisseur" placeholder="Fournisseur" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
 <datalist id="Fournisseur" >
 <option  value="Fournisseur">
 </datalist>
@@ -195,13 +195,13 @@
 
 
         <div class="flex justify-center gap-12 mt-4">
-            <button class="w-52 bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl">Payer</button>
-            <button class="w-52  bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl">Annuler</button>
+            <button class="w-52 bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl" id="payer">Payer</button>
+            <button class="w-52  bg-[#F26D29] text-white font-semibold p-3 text-sm arround rounded-xl" id="annuler">Annuler</button>
          </div>
 
         </main>
 
 
-
+<script src="payement.js"></script>
 </body>
 </html>
