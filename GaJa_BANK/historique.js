@@ -70,7 +70,7 @@ next_v.addEventListener("click", () => {
 });
 
 precedent_v.addEventListener("click", () => {
-    if (index > 0) {
+    if (index > 0){
         index--;
         mettreAJourUI();
     }
