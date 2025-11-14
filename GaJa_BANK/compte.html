@@ -10,121 +10,132 @@
 </head>
 
 <body class="flex">
-    <footer class="bg-[#003269] h-[100vh] w-64 flex flex-col">
+        <footer id="footer"
+        class="bg-[#003269] h-[100vh] w-0 md:w-[320px] transition-all duration-300 overflow-hidden md:block fixed md:relative left-0 top-0 z-50">
+        <a href="javascript:void(0)" class="closebtn md:hidden block text-white text-3xl p-4 cursor-pointer"
+            onclick="closeNav()">&times;</a>
+
         <div class="flex justify-center">
             <img src="./images/logoBANK.png" alt="" class="w-40">
         </div>
-        <div class="ml-4 mr-2 flex flex-col gap-[1px]">
-            <div>
-                <a href="#" class="flex items-center gap-[6px]">
-                    <i class="fa-solid fa-house text-white "></i>
-                    <p class="text-white">Accueil</p>
+
+        <div class="ml-4 mr-2 flex flex-col gap-3">
+            <div class="">
+                <a href="accueil.html" class="flex items-center gap-2 text-white">
+                    <i class="fa-solid fa-house"></i>
+                    <p class="">Accueil</p>
                 </a>
             </div>
-            <div class="flex flex-col ">
-                <div class="text-[#F26D29] flex justify-between items-center ">
+            <div class="flex flex-col">
+                <div class="menu-header text-[#F26D29] flex justify-between items-center cursor-pointer">
                     <a href="#" class="flex items-center gap-2">
                         <i class="fa-solid fa-user"></i>
                         <p>Mes comptes</p>
                     </a>
-                    <i class="fa-solid fa-angle-up"></i>
+                    <i class="fa-solid fa-angle-up transition-transform duration-300"></i>
                 </div>
-                <div class="ml-8">
-                    <a href="#">
-                        <p class="text-[#F26D29] ">Mes comptes chéques</p>
+                <div class="submenu ml-8 text-white hidden">
+                    <a href="compte.html">
+                        <p class="text-[#F26D29]">Mes comptes chèques</p>
                     </a>
-                    <a href="#">
-                        <p class="text-white ">Mes comptes d’épargne</p>
+                    <a href="compte_epargne.html">
+                        <p>Mes comptes d’épargne</p>
                     </a>
                 </div>
             </div>
-            <div class="flex flex-col ">
-                <div class="flex items-center justify-between text-white">
+
+            <div class="flex flex-col">
+                <div class="menu-header flex justify-between items-center text-white cursor-pointer">
                     <a href="#" class="flex items-center gap-2">
-                        <i class="fa-solid fa-building-columns "></i>
+                        <i class="fa-solid fa-building-columns"></i>
                         <p>Mes relations banque</p>
                     </a>
-                    <i class="fa-solid fa-angle-up"></i>
+                    <i class="fa-solid fa-angle-up transition-transform duration-300"></i>
                 </div>
-                <div class="ml-8 text-white">
-                    <a href="#">
+                <div class="submenu ml-8 text-white hidden">
+                    <a href="mes_cartes.html">
                         <p>Mes Cartes</p>
                     </a>
-                    <a href="#">
-                        <p>Mes Bénéficiaires</p>
+                    <a href="beneficiaire.html">
+                        <p class="text-white">Mes Bénéficiaires</p>
                     </a>
                 </div>
             </div>
-            <div class="flex flex-col ">
-                <div class="flex justify-between items-center text-white">
+
+            <div class="flex flex-col">
+                <div class="menu-header flex justify-between items-center text-white cursor-pointer">
                     <a href="#" class="flex items-center gap-2">
                         <i class="fa-solid fa-arrows-rotate"></i>
-                        <p>Mes opértaions</p>
+                        <p>Mes opérations</p>
                     </a>
-                    <i class="fa-solid fa-angle-up"></i>
+                    <i class="fa-solid fa-angle-up transition-transform duration-300"></i>
                 </div>
-                <div class="ml-8 text-white">
-                    <a href="#">
+                <div class="submenu ml-8 text-white hidden">
+                    <a href="verment.html">
                         <p>Virement</p>
                     </a>
-                    <a href="#">
+                    <a href="recharge.html">
                         <p>Recharge</p>
                     </a>
-                    <a href="#">
-                        <p>Payement de facteurs</p>
+                    <a href="payement.html">
+                        <p>Paiement de factures</p>
                     </a>
                 </div>
             </div>
+
             <div class="flex flex-col">
-                <div class="flex justify-between items-center text-white">
+                <div class="menu-header flex justify-between items-center text-white cursor-pointer">
                     <a href="#" class="flex items-center gap-2">
                         <i class="fa-solid fa-file-lines"></i>
                         <p>Mes Demandes En ligne</p>
                     </a>
-                    <i class="fa-solid fa-angle-up"></i>
+                    <i class="fa-solid fa-angle-up transition-transform duration-300"></i>
                 </div>
-                <div class="ml-8 text-white">
-                    <a href="#">
+                <div class="submenu ml-8 text-white hidden">
+                    <a href="demandeRIB.html">
                         <p>Demande de RIB</p>
                     </a>
                 </div>
             </div>
-            <div class="">
-                <a href="#" class="flex items-center text-white gap-2">
-                    <i class="fa-solid fa-right-left "></i>
+
+            <div>
+                <a href="convertisseure.html" class="flex items-center text-white gap-2">
+                    <i class="fa-solid fa-right-left"></i>
                     <p>Convertisseur</p>
                 </a>
             </div>
-            <div class="">
-                <a href="#" class="flex items-center text-white gap-2">
+
+            <div>
+                <a href="historique.html" class="flex items-center text-white gap-2">
                     <i class="fa-solid fa-rotate-left"></i>
                     <p>Historique</p>
                 </a>
             </div>
         </div>
-        </div>
 
     </footer>
     <section class="ml-12 mt-6 w-[75%] mr-16">
-
+<div class="w-full md:hidden p-4">
+            <span class="text-3xl cursor-pointer text-orange-500" onclick="openNav()">&#9776;</span>
+        </div>
         <div>
             <div class="flex justify-between items-center">
-                <p class="text-[#F26D29] text-3xl mb-8">Mes comptes chéques</p>
-                <div class="h-[1px] bg-[#F26D29] w-[65%] "></div>
+                <p class="text-[#F26D29] text-xl md:text-3xl mb-8">Mes comptes chéques</p>
+                <div class="hidden md:h-[1px] md:bg-[#F26D29] md:w-[65%] "></div>
             </div>
 
             <div class="ml-10 mb-10 text-gray-800 ">
                 <p class="">N°Compte : <span id="span-num-compte" class="text-blue-600">1234567876543212</span></p>
                 <p>Solde actualisé : <span class="text-green-400"><span id="span-solde">10000.00</span><span
-                            id="span-MAD">MAD</span></span> </p>
+                            id="span-MAD"> MAD</span></span> </p>
             </div>
         </div>
         <div>
             <div class="flex justify-between items-center">
-                <p class="text-[#F26D29] text-3xl mb-8">Opérations</p>
-                <div class="h-[1px] bg-[#F26D29] w-[81%] "></div>
+                <p class="text-[#F26D29] text-xl md:text-3xl mb-8">Opérations</p>
+                <div class="hidden md:h-[1px] md:bg-[#F26D29] md:w-[81%] "></div>
             </div>
-            <div class="grid grid-cols-2 gap-4 ml-10 mb-10 ">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 ml-10 mb-10 ">
                 <div>
                     <p id="date-operation" class="text-blue-600">01/11/2025</p>
                     <div class="bg-gray-200 flex justify-between rounded-lg p-2 text-gray-800">
@@ -143,7 +154,7 @@
                         </p>
                     </div>
                 </div>
-                 <div>
+                <div>
                     <p id="date-operation" class="text-blue-600">30/09/2025</p>
                     <div class="bg-gray-200 flex justify-between rounded-lg p-2 text-gray-800">
                         <p>VIRT RECU DE LA PART ASSO LEF </p>
@@ -155,6 +166,8 @@
             </div>
         </div>
     </section>
+    <script src="comptecheque.js"></script>
+    <script src="footer.js"></script>
 </body>
 
 </html>
