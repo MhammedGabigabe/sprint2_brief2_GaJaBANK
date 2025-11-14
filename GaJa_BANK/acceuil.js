@@ -51,3 +51,22 @@ eye.addEventListener("click", () => {
         visible = false;
     }
 });
+
+
+const mescartes=document.getElementById("mescartes");
+const recharge=document.getElementById("recharge");
+const factures=document.getElementById("factures");
+const verment=document.getElementById("verment");
+
+mescartes.addEventListener("click",()=>{
+    window.location.href = "mes_cartes.html";
+});
+recharge.addEventListener("click",()=>{
+    window.location.href = "recharge.html";
+});
+factures.addEventListener("click",()=>{
+    window.location.href = "payement.html";
+});
+verment.addEventListener("click",()=>{
+    window.location.href = "verment.html";
+});

@@ -7,6 +7,34 @@ const montant = document.getElementById("montant");
 const motif = document.getElementById("motif");
 const confirme = document.getElementById("confirme");
 const annuler = document.getElementById("Annuler");
+const compte_input=document.getElementById("compte");
+const select=
+
+compte_input.addEventListener("input",() => {
+
+    let valeure=compte_input.value;
+   if(valeure=="compte_Principal"){
+const bénificiaires = JSON.parse(localStorage.getItem("bénificiaires")) || [];
+
+const bénificiaires_nom = bénificiaires.filter(x => x.identifiant == identifiant).map(x => x.nom);
+
+
+bénificiaires_nom.forEach(n =>{
+    const opt = document.createElement("option");
+    opt.value = n;
+    Bénéficiaires.appendChild(opt);
+})
+  const opt = document.createElement("option");
+    opt.value = "Mon Compte Epargne";
+    Bénéficiaires.appendChild(opt);
+
+
+   }else{
+       const opt = document.createElement("option");
+    opt.value = "Mon Compte Principale";
+    Bénéficiaires.appendChild(opt);
+   }
+});
 
 let m = new Date();
 let mois = m.getMonth() + 1;
@@ -15,6 +43,7 @@ let montant_totale_par_mois = 30000;
 let userConnected = JSON.parse(localStorage.getItem("userConnected"));
 let identifiant = userConnected.comptes.comptePrincipal.identifiant;
 let solde_actuelle = Number(userConnected.comptes.comptePrincipal.solde);
+let solde_actuelle_epargne=Number(userConnected.comptes.compteEpargne.solde)
 
 
 if (userConnected.genre == "Homme") {
@@ -27,18 +56,6 @@ ribc.textContent = userConnected.comptes.comptePrincipal.numero;
 soldec.textContent = solde_actuelle + " MAD";
 
 
-const bénificiaires = JSON.parse(localStorage.getItem("bénificiaires")) || [];
-
-const bénificiaires_nom = bénificiaires
-    .filter(x => x.identifiant == identifiant)
-    .map(x => x.nom);
-
-
-bénificiaires_nom.forEach(n => {
-    const opt = document.createElement("option");
-    opt.value = n;
-    Bénéficiaires.appendChild(opt);
-});
 
 
 const regexMontant = /^\d+$/;
@@ -52,13 +69,17 @@ confirme.addEventListener("click", () => {
 });
 
 
-annuler.addEventListener("click", () => {
+annuler.addEventListener("click", () =>{
     montant.value = "";
     motif.value = "";
 });
 
 
 function verifierPlafond() {
+    let valeure=compte_input.value;
+    const montant_num = Number(montant.value);
+    if(valeure=="compte_Principal" && Bénéficiaire_input.value!=="Mon Compte Epargne"){
+
 
     const toutes_verments = JSON.parse(localStorage.getItem("verments")) || [];
 
@@ -69,7 +90,7 @@ function verifierPlafond() {
         0
     );
 
-    const montant_num = Number(montant.value);
+    
     const mantant_reel = total_montant + montant_num;
 
 
@@ -115,4 +136,25 @@ function verifierPlafond() {
     localStorage.setItem("userConnected", JSON.stringify(userConnected));
 
     alert("Versement confirmé avec succès");
+}else  if(valeure=="compte_Principal" && Bénéficiaire_input.value=="Mon Compte Epargne"){
+      if (montant_num > solde_actuelle) {
+        alert("Le solde doit être supérieur ou égal au montant");
+        return;
+    }
+
+     userConnected.comptes.comptePrincipal.solde -= Number(montant.value);
+       userConnected.comptes.compteEpargne.solde +=Number(montant.value);
+        localStorage.setItem("userConnected", JSON.stringify(userConnected));
+}else if(valeure=="compte_Epargne" && Bénéficiaire_input.value=="Mon Compte Principale"){
+      if (montant_num > solde_actuelle_epargne) {
+        alert("Le solde doit être supérieur ou égal au montant");
+        return;
+    }
+    userConnected.comptes.comptePrincipal.solde += Number(montant.value);
+       userConnected.comptes.compteEpargne.solde -=Number(montant.value);
+        localStorage.setItem("userConnected", JSON.stringify(userConnected));
+        
 }
+
+ }
+
