@@ -12,167 +12,172 @@
 </head>
 
 <body>
-  <div class="flex md:flex-row flex-col md:gap-8 gap-2 ">
-    
-    <footer>
-      <div class="flex justify-center"><img src="image/logo.png" alt="cette image n'est pas available"
-          class="w-40 ml-8" /></div>
+  <div class="flex flex-col md:flex-row gap-2 md:gap-8   ">
+
+    <aside>
+      <div class="flex justify-center">
+        <img src="image/logo.png" alt="cette image n'est pas available" class="w-40 h-32 ml-8" />
+      </div>
       <div><img src="image/informationetapes.png" alt=""
           class="w-64 h-[457px] hidden md:block  border-2 border-t-orange-500 border-r-orange-500"></div>
-    </footer>
+    </aside>
 
-
-
-    <main class="mt-[4px] flex flex-col gap-6 md:ml-0 ml-16 ">
+    <main class="mt-[4px] flex flex-col gap-6 md: ml-6 ">
       <h1 class="text-[#0E5497] text-2xl ">Bonjour et merci pour votre confiance.</h1>
       <p class="text-sm text-gray-600">En rejoignant GaJa BANK, vous faites le choix d’un service fiable, sécurisé et
-        conçu
-        pour vous accompagner dans chaque étape de votre <br> gestion financière.</p>
+        conçu pour vous accompagner dans chaque étape de votre <br> gestion financière.</p>
       <h4 class="text-[#F26D29] text-xl">Coordonnées</h4>
       <div class="h-[0.5px] bg-[#F26D29] -mt-4 md:w-[80%] w-[90%]"></div>
 
 
+      <form action="" class="grid md:grid-cols-3 grid-cols-1 gap-x-12 md:mr-16 mr-0 gap-y-12 ml-[8px] md:ml-0">
 
 
+        <div class="relative w-full md:w-80">
+          <input type="text" placeholder=" "
+            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-base p-2 bg-transparent" />
 
-      <form action="" class="grid md:grid-cols-3 grid-cols-1 gap-x-12 md:mr-16 mr-0 gap-y-12 ml-[20px] md:ml-0">
-        <div class="relative w-80">
-
-          <input type="text" id="name" placeholder=" "
-            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none" />
-
-
-          <label for="name" class="absolute left-2 top-2 text-gray-500 text-base bg-white px-1 transition-all duration-300 
-             peer-placeholder-shown:top-2 
-             peer-placeholder-shown:text-gray-400 
-             peer-placeholder-shown:text-base 
-             peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+          <label class="absolute left-2 top-2 bg-white px-1 text-gray-500 transition-all duration-300
+        peer-placeholder-shown:top-2 peer-placeholder-shown:text-base
+        peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+        peer-[&:not(:placeholder-shown)]:-top-3
+        peer-[&:not(:placeholder-shown)]:text-sm">
             Nom*
           </label>
         </div>
 
-
         <div class="relative w-80">
+          <input type="text" placeholder=" "
+            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-base p-2 bg-transparent" />
 
-          <input type="text" id="prenom" placeholder=" "
-            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none" />
-
-
-          <label for="prenom" class="absolute left-2 top-2 text-gray-500 text-base bg-white px-1 transition-all duration-300 
-             peer-placeholder-shown:top-2 
-             peer-placeholder-shown:text-gray-400 
-             peer-placeholder-shown:text-base 
-             peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+          <label class="absolute left-2 top-2 bg-white px-1 text-gray-500 transition-all duration-300
+        peer-placeholder-shown:top-2 peer-placeholder-shown:text-base
+        peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+        peer-[&:not(:placeholder-shown)]:-top-3
+        peer-[&:not(:placeholder-shown)]:text-sm">
             Prenom*
           </label>
         </div>
 
-
         <div class="relative w-80">
-          <label
-            class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300">Genre:</label>
-          <input list="genres" id="genre" name="genre" placeholder=" select a genre"
-            class="peer  w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
-          <datalist id="genres">
-            <option value="Homme">
-            <option value="Femme">
-          </datalist>
+          <input list="genres" placeholder=" " onkeydown="return false"
+            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-base p-2 bg-transparent" />
 
+          <label class="absolute left-2 top-2 bg-white px-1 text-gray-500 transition-all duration-300
+    peer-placeholder-shown:top-2 peer-placeholder-shown:text-base
+    peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+    peer-[&:not(:placeholder-shown)]:-top-3
+    peer-[&:not(:placeholder-shown)]:text-sm">
+            Genre*
+          </label>
+
+          <datalist id="genres">
+            <option value="Homme"></option>
+            <option value="Femme"></option>
+          </datalist>
         </div>
 
         <div class="relative w-80 col-span-full">
+          <input type="text" placeholder=" "
+            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-base p-2 bg-transparent" />
 
-          <input type="text" id="email" placeholder=" "
-            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none" />
-
-
-          <label for="email" class="absolute left-2 top-2 text-gray-500 text-base bg-white px-1 transition-all duration-300 
-             peer-placeholder-shown:top-2 
-             peer-placeholder-shown:text-gray-400 
-             peer-placeholder-shown:text-base 
-             peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+          <label class="absolute left-2 top-2 bg-white px-1 text-gray-500 transition-all duration-300
+        peer-placeholder-shown:top-2 peer-placeholder-shown:text-base
+        peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+        peer-[&:not(:placeholder-shown)]:-top-3
+        peer-[&:not(:placeholder-shown)]:text-sm">
             Email*
           </label>
         </div>
 
 
         <div class="relative w-80">
-          <label
-            class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300">Nationnalite:</label>
-          <input list="Nationnalite" id="nationnalite" name="genre" placeholder=" select a genre"
-            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
-          <datalist id="Nationnalite" class="bgblue-500">
-            <option value="Maroc">
-          </datalist>
+          <input list="nationalites" placeholder=" "
+            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-base p-2 bg-transparent" />
 
+          <label class="absolute left-2 top-2 bg-white px-1 text-gray-500 transition-all duration-300
+    peer-placeholder-shown:top-2 peer-placeholder-shown:text-base
+    peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+    peer-[&:not(:placeholder-shown)]:-top-3
+    peer-[&:not(:placeholder-shown)]:text-sm">
+            Nationalité*
+          </label>
+
+          <datalist id="nationalites">
+            <option value="Maroc"></option>
+            <option value="France"></option>
+            <option value="Espagne"></option>
+          </datalist>
         </div>
 
 
-        <div class="relative w-80">
-          <label class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300">Pays de
-            residence:</label>
-          <input list="pays" id="pay" name="genre" placeholder=" select a genre"
-            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
-          <datalist id="pays" class="bgblue-500">
-            <option value="Maroc">
-          </datalist>
 
+        <div class="relative w-80">
+          <input list="pays" placeholder=" "
+            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-base p-2 bg-transparent" />
+
+          <label class="absolute left-2 top-2 bg-white px-1 text-gray-500 transition-all duration-300
+    peer-placeholder-shown:top-2 peer-placeholder-shown:text-base
+    peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+    peer-[&:not(:placeholder-shown)]:-top-3
+    peer-[&:not(:placeholder-shown)]:text-sm">
+            Pays de résidence*
+          </label>
+
+          <datalist id="pays">
+            <option value="Maroc"></option>
+            <option value="France"></option>
+            <option value="Espagne"></option>
+          </datalist>
         </div>
 
 
+
         <div class="relative w-80">
+          <input type="text" placeholder=" "
+            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-base p-2 bg-transparent" />
 
-          <input type="text" id="nemero" placeholder=" "
-            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none" />
-
-
-          <label for="nemero" class="absolute left-2 top-2 text-gray-500 text-base bg-white px-1 transition-all duration-300 
-             peer-placeholder-shown:top-2 
-             peer-placeholder-shown:text-gray-400 
-             peer-placeholder-shown:text-base 
-             peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
-            Nemero*
+          <label class="absolute left-2 top-2 bg-white px-1 text-gray-500 transition-all duration-300
+        peer-placeholder-shown:top-2 peer-placeholder-shown:text-base
+        peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+        peer-[&:not(:placeholder-shown)]:-top-3
+        peer-[&:not(:placeholder-shown)]:text-sm">
+            Numéro*
           </label>
         </div>
 
 
         <div class="relative w-80">
+          <input type="password" placeholder=" "
+            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-base p-2 bg-transparent" />
 
-          <input type="text" id="password" placeholder=" "
-            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none" />
-
-
-          <label for="password" class="absolute left-2 top-2 text-gray-500 text-base bg-white px-1 transition-all duration-300 
-             peer-placeholder-shown:top-2 
-             peer-placeholder-shown:text-gray-400 
-             peer-placeholder-shown:text-base 
-             peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+          <label class="absolute left-2 top-2 bg-white px-1 text-gray-500 transition-all duration-300
+        peer-placeholder-shown:top-2 peer-placeholder-shown:text-base
+        peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+        peer-[&:not(:placeholder-shown)]:-top-3
+        peer-[&:not(:placeholder-shown)]:text-sm">
             Password*
           </label>
         </div>
 
-
         <div class="relative w-80">
+          <input type="password" placeholder=" "
+            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-base p-2 bg-transparent" />
 
-          <input type="text" id="confirmation" placeholder=" "
-            class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none" />
-
-
-          <label for="confirmation" class="absolute left-2 top-2 text-gray-500 text-base bg-white px-1 transition-all duration-300 
-             peer-placeholder-shown:top-2 
-             peer-placeholder-shown:text-gray-400 
-             peer-placeholder-shown:text-base 
-             peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500">
+          <label class="absolute left-2 top-2 bg-white px-1 text-gray-500 transition-all duration-300
+        peer-placeholder-shown:top-2 peer-placeholder-shown:text-base
+        peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-500
+        peer-[&:not(:placeholder-shown)]:-top-3
+        peer-[&:not(:placeholder-shown)]:text-sm">
             Confirmation Password*
           </label>
         </div>
-
         <div>
           <button type="button" id="enregistrer"
             class="bg-[#F26D29] text-sm text-white p-3 w-52 arround rounded-xl ml-[4rem]">Enregistrer</button>
         </div>
-
       </form>
+
 
       <div id="result"
         class="mb-[10px] hidden md:mb-0 md:w-[400px] w-[280px]  bg-gray-100 rounded-sm border border-gray-200 text-[12px] font-medium h-[40px] flex justify-center items-center  -mt-[10px] ml-[43px] md:ml-[150px] text-red-500">
