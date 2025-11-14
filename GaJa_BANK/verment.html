@@ -129,8 +129,22 @@
          <div class="h-[0.5px] bg-[#F26D29] w-[80%] ml-4 mb-4"></div>
 
 
-         <div class="grid grid-cols-3 gap-8 ml-16">
-            <div class="relative  col-span-full w-[400px]">
+         <div class="grid grid-cols-2 gap-8 ml-16">
+
+  <div class="relative   w-[400px]">
+ <label  class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300"> Comptes :</label>
+    <input list="comptes" id="compte"  name=" comptes" placeholder=" comptes" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
+<datalist id="comptes">
+    <option value="compte_Principal">
+        <option value="compte_Epargne"></option>
+
+</datalist>
+
+  </div>
+
+
+
+            <div class="relative   w-[400px]">
  <label  class="absolute left-2 -top-4  text-gray-500 text-base  px-1 transition-all duration-300"> Bénéficiaires:</label>
     <input list="Bénéficiaires" id="Bénéficiaire"  name=" Bénéficiaire" placeholder=" Bénéficiaires" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none">
 <datalist id="Bénéficiaires" >
@@ -138,9 +152,10 @@
 </datalist>
 
   </div>
+   
 
 
-   <div class="relative  l">
+   <div class="relative  l w-[400px]">
   
     <input 
       type="text" 
@@ -167,7 +182,7 @@
       type="text" 
       id="motif" 
       placeholder=" " 
-      class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none"
+      class="peer w-[400px] border-b-2 border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-base p-2 bg-transparent rounded-none"
     />
 
 
